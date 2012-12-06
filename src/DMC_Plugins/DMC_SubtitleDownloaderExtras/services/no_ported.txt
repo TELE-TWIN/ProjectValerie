@@ -1,0 +1,19 @@
+Name: Itasa
+Cause: To search a user and password is required
+Conclusion: Maybe later
+
+Name: LegendasTV
+Cause: To search a user and password is required
+Conclusion: Maybe later
+
+Name: Podnapisi
+Cause: To search a user and password is required
+Conclusion: Maybe later
+
+Name: Sublight
+Cause: 
+Conclusion: Maybe later
+
+Name: Titulky
+Cause: To search a user and password is required
+Conclusion: Maybe later

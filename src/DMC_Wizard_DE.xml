@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wizard>
+	<step id="welcome" nextstep="autostart">
+		<text value="Herzlich willkommen bei Project Valerie" />
+		<code>
+self["textTop"].setText(" ")
+self["textCenter"].setText("Dieser Assistent begleitet Sie durch die wichtigsten Einstellungen von Project Valerie")
+self["textBottom"].setText("Weiter mit der OK Taste")
+		</code>
+	</step>
+	<step id="autostart" nextstep="checkforupdate">
+		<text value="Autostart-Konfiguration" />
+		<list evaluation="autostart" onselect="autostart">
+			<listentry caption="Ja" step="yes" />
+			<listentry caption="Nein" step="no" />
+		</list>
+		<code>
+self["textTop"].setText("Soll Project Valerie automatisch starten ?")
+self["textCenter"].setText(" ")
+self["textBottom"].setText("Weiter mit der OK Taste")
+		</code>
+	</step>
+	<step id="checkforupdate" nextstep="language">
+		<text value="Update-Konfiguration" />
+		<list evaluation="checkforupdate" onselect="checkforupdate">
+			<listentry caption="Ja" step="yes" />
+			<listentry caption="Nein" step="no" />
+		</list>
+		<code>
+self["textTop"].setText("Soll Project Valerie beim Start automatisch nach Updates suchen ?")
+self["textCenter"].setText(" ")
+self["textBottom"].setText("Weiter mit der OK Taste")
+		</code>
+	</step>
+	<step id="language" nextstep="preend">
+		<text value="Sprache-Konfiguration" />
+		<list evaluation="language" onselect="language">
+			<listentry caption="Englisch" step="en" />
+			<listentry caption="Deutsch" step="de" />
+			<listentry caption="Italienisch" step="it" />
+			<listentry caption="Spanisch" step="es" />
+			<listentry caption="Französisch" step="fr" />
+			<listentry caption="Portugiesisch" step="pt" />
+		</list>
+		<code>
+self["textTop"].setText("Welche Sprache soll zum Sync von Filmen/Serien genutzt werden?")
+self["textCenter"].setText(" ")
+self["textBottom"].setText("Weiter mit der OK Taste")
+		</code>
+	</step>
+	<step id="preend" nextstep="end">
+		<text value=" " />
+		<code>
+self["textTop"].setText(" ")
+self["textCenter"].setText("Alle Konfigurationen gespeichert")
+self["textBottom"].setText("Weiter mit der OK Taste")
+self.saveConfig()
+		</code>
+	</step>
+	<step id="end">
+		<code>
+self.finishUp()
+self.close()
+		</code>
+	</step>
+</wizard>

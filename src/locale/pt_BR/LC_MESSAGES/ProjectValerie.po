@@ -1,0 +1,931 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: ProjectValerie(POT)\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-04-09 10:47+0100\n"
+"PO-Revision-Date: 2012-12-05 21:26+0100\n"
+"Last-Translator: Erik Fornoff <erik.fornoff@gmail.com>\n"
+"Language-Team: IhaD <JackDaniel@i-have-a-dreambox.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"Language: de_AT\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../__init__.py:42
+msgid "English"
+msgstr "Inglês"
+
+#: ../DMC_BackdropView.py:60
+#: ../DMC_ListView.py:82
+#: ../DMC_PosterView.py:74
+msgid "Sort: "
+msgstr "Ordenação:"
+
+#: ../DMC_BackdropView.py:60
+#: ../DMC_ListView.py:82
+#: ../DMC_PosterView.py:74
+msgid "Default"
+msgstr "Padrão"
+
+#: ../DMC_BackdropView.py:119
+#: ../DMC_ListView.py:150
+#: ../DMC_PosterView.py:153
+msgid "Overview"
+msgstr "Apresentação"
+
+#: ../DMC_ListView.py:83
+msgid "Filter: "
+msgstr "Filtro:"
+
+#: ../DMC_ListView.py:83
+msgid "None"
+msgstr "Nada"
+
+#: ../DMC_ListView.py:179
+msgid "Genre"
+msgstr "Gênero"
+
+#: ../DMC_ListView.py:198
+msgid "min"
+msgstr "min"
+
+#: ../DMC_ListView.py:221
+msgid "Total:"
+msgstr "Total:"
+
+#: ../DMC_ListView.py:222
+msgid "Pages:"
+msgstr "Páginas:"
+
+#: ../DMC_MainMenu.py:101
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: ../DMC_MainMenu.py:102
+msgid "Save"
+msgstr "Salvar"
+
+#: ../DMC_MainMenu.py:116
+#: ../DMC_MainMenu.py:350
+#: ../DMC_MainMenu.py:363
+#: ../DMC_MainMenu.py:943
+msgid "Settings"
+msgstr "Definições"
+
+#: ../DMC_MainMenu.py:146
+msgid ""
+"Some settings may need a GUI restart\n"
+"Do you want to Restart the GUI now?"
+msgstr ""
+"Algumas definições necessitam do reinício da interfáce gráfica\n"
+"Gostaria de reiniciá-la agora?"
+
+#: ../DMC_MainMenu.py:180
+msgid "Checking for updates ..."
+msgstr "Verificando atualizações..."
+
+# O que é PVMC?
+# Onde é usado??
+#: ../DMC_MainMenu.py:193
+msgid "PVMC Update"
+msgstr "Atualização do PVMC"
+
+#: ../DMC_MainMenu.py:201
+msgid "No update available"
+msgstr "Sem atualizações disponíveis"
+
+# Acho que o correto seria:
+# Atualização para Revisão, mas preciso saber onde é usado.
+#: ../DMC_MainMenu.py:205
+msgid "Update to revision "
+msgstr "Atualização de revisão"
+
+#: ../DMC_MainMenu.py:207
+msgid "No internet connection available!"
+msgstr "Conexão à nternet não disponível!"
+
+#: ../DMC_MainMenu.py:223
+msgid ""
+"Updating ProjectValerie \n"
+"\n"
+"\n"
+"Stay tuned :-)"
+msgstr ""
+"Atualizando ProjectValerie \n"
+"\n"
+"\n"
+"Fique ligado :-)"
+
+#: ../DMC_MainMenu.py:258
+msgid ""
+"Enigma2 must be restarted!\n"
+"Should Enigma2 now restart?"
+msgstr ""
+"O enigma2 precisa ser reiniciado!\n"
+"Gostaria de reiniciá-lo agora?"
+
+#: ../DMC_MainMenu.py:348
+#: ../DMC_MainMenu.py:357
+#: ../DMC_MainMenu.py:366
+#: ../DMC_MainMenu.py:392
+#: ../DMC_MovieLibrary.py:129
+msgid "Movies"
+msgstr "Filmes"
+
+#: ../DMC_MainMenu.py:349
+msgid "TV"
+msgstr "TV"
+
+#: ../DMC_MainMenu.py:351
+#: ../DMC_MainMenu.py:364
+msgid "Synchronize"
+msgstr "Sincronizar"
+
+#: ../DMC_MainMenu.py:352
+#: ../DMC_MainMenu.py:385
+#: ../DMC_MainMenu.py:387
+msgid "Music"
+msgstr "Música"
+
+# O correto não seria: Seriados???
+#: ../DMC_MainMenu.py:358
+msgid "Series"
+msgstr "Séries"
+
+#: ../DMC_MainMenu.py:365
+#: ../DMC_MainMenu.py:389
+msgid "Live TV"
+msgstr "Programas ao vivo"
+
+#: ../DMC_MainMenu.py:367
+#: ../DMC_MainMenu.py:393
+#: ../DMC_TvShowLibrary.py:317
+msgid "TV Shows"
+msgstr "Seriados"
+
+#: ../DMC_MainMenu.py:378
+#: ../DMC_MainMenu.py:380
+msgid "Pictures"
+msgstr "Imagens"
+
+#: ../DMC_MainMenu.py:400
+#: ../DMC_MainMenu.py:402
+msgid "Videos"
+msgstr "Vídeos"
+
+#: ../DMC_MainMenu.py:407
+#: ../DMC_MainMenu.py:409
+msgid "Weather"
+msgstr "Tempo"
+
+#: ../DMC_MainMenu.py:415
+#: ../DMC_MainMenu.py:417
+msgid "Programs"
+msgstr "Programas"
+
+#: ../DMC_MainMenu.py:422
+#: ../DMC_MainMenu.py:424
+msgid "System"
+msgstr "Sistema"
+
+#: ../DMC_MainMenu.py:469
+msgid "Project Valerie"
+msgstr "Project Valerie"
+
+#: ../DMC_MainMenu.py:565
+#, python-format
+msgid ""
+"A new version of MediaCenter is available for download!\n"
+"\n"
+"Version: %s"
+msgstr ""
+"Uma nova versão do Media Center está disponível para download!\n"
+"\n"
+"Version: %s"
+
+#: ../DMC_MainMenu.py:575
+#, python-format
+msgid "Update to %s available"
+msgstr "Atualização para %s disponível"
+
+#: ../DMC_MainMenu.py:643
+#, python-format
+msgid ""
+"UNEXPECTED ERROR:\n"
+"%s"
+msgstr ""
+"ERRO INESPERADO:\n"
+"%s"
+
+#: ../DMC_MainMenu.py:662
+msgid "Back"
+msgstr "Voltar"
+
+#: ../DMC_MainMenu.py:873
+#: ../DMC_View.py:684
+msgid "Not available"
+msgstr "Não disponível"
+
+#: ../DMC_MainMenu.py:875
+#: ../DMC_View.py:686
+msgid "not available"
+msgstr "não disponível"
+
+#: ../DMC_MainMenu.py:911
+msgid "Show wizard on next start"
+msgstr "Mostrar o assistente de configuração na próxima execução do programa"
+
+#: ../DMC_MainMenu.py:912
+msgid "Start Valerie on e2 start"
+msgstr "Iniciar o Valerie em conjunto com o ENIGMA2"
+
+#: ../DMC_MainMenu.py:913
+msgid "Check for updates on Valerie start"
+msgstr "Procurar por atualizações automaticamente quando iniciar o Project Valerie"
+
+# acho que ficaria melhor assim:
+# Atualizações do Tipo
+#: ../DMC_MainMenu.py:914
+msgid "Check for updates of type"
+msgstr "Verificar se há atualizações por tipo"
+
+#: ../DMC_MainMenu.py:915
+msgid "Skin"
+msgstr "Tema"
+
+#: ../DMC_MainMenu.py:916
+msgid "On Power press"
+msgstr "Ao pressionar o botão ligar/desligar"
+
+#: ../DMC_MainMenu.py:917
+msgid "Show Movie and TVShow in main menu"
+msgstr "Mostrar filmes esSeriados na tela principal"
+
+# preciso saber onde é usado
+#: ../DMC_MainMenu.py:918
+msgid "Seen / Unseen User ID"
+msgstr "Reconhecido / Usuário com ID desconhecido"
+
+#: ../DMC_MainMenu.py:919
+msgid "Show Seen / Unseen for Shows"
+msgstr "Mostrar shows vistos / Shows não vistos"
+
+#: ../DMC_MainMenu.py:920
+msgid "Show Seen / Unseen for Seasons"
+msgstr "Mostrar shows vistos / Temporadas não vistas"
+
+#: ../DMC_MainMenu.py:925
+msgid "Valerie Config folder (Database, ...)"
+msgstr "Pasta de configurações do Valerie (Banco de dados, ...)"
+
+#: ../DMC_MainMenu.py:926
+msgid "Valerie media folder (Poster, Backdrops)"
+msgstr "Pasta de mídia do Valerie (Poster, Backdrops)"
+
+#: ../DMC_MainMenu.py:927
+msgid "Valerie tmp folder (Logs, Cache)"
+msgstr "Pasta temporária do Valerie (Logs, Cache)"
+
+#: ../DMC_MainMenu.py:928
+msgid "Valerie debug mode"
+msgstr "Modo de depuração do Valerie"
+
+#: ../DMC_MainMenu.py:942
+msgid "Expert"
+msgstr "Avançado"
+
+#: ../DMC_MainMenu.py:944
+msgid "Update"
+msgstr "Atualização"
+
+#: ../DMC_Player.py:85
+msgid "Yes, but play next episode"
+msgstr "Sim, mas inicie o próximo episódio"
+
+#: ../DMC_Player.py:87
+msgid "Yes"
+msgstr "Sim"
+
+#: ../DMC_Player.py:90
+msgid "No, continue"
+msgstr "Não, continue"
+
+#: ../DMC_Player.py:95
+msgid "Stop playing this movie?"
+msgstr "Parar a reprodução deste filme?"
+
+#: ../DMC_View.py:47
+msgid "List"
+msgstr "Lista"
+
+#: ../DMC_View.py:48
+msgid "Poster-Flow"
+msgstr "Cartaz"
+
+#: ../DMC_View.py:49
+msgid "Backdrop"
+msgstr "Imagem de fundo"
+
+#: ../DMC_View.py:380
+msgid "Select sort"
+msgstr "Selecione a categoria"
+
+#: ../DMC_View.py:444
+msgid "Select filter"
+msgstr "Selecione filtro"
+
+#: ../DMC_View.py:484
+msgid "Select view"
+msgstr "Selecione o modo de visão"
+
+#: ../DMC_View.py:702
+msgid "Not found!\n"
+msgstr "Não encontrado!\n"
+
+#: ../DMC_View.py:703
+msgid ""
+"\n"
+"\n"
+"Please make sure that your drive is connected/mounted."
+msgstr ""
+"\n"
+"\n"
+"Por favor, certifique-se de que a unidade está ligada/montada."
+
+#: ../DMC_View.py:732
+msgid "Set view as default"
+msgstr "Selecionar as opções de visibilidade como padrão"
+
+#: ../DMC_View.py:735
+msgid "Clear default view"
+msgstr "Limpar as opções de visibilidade padrão"
+
+#: ../DMC_View.py:742
+msgid "No plugins available"
+msgstr "Sem plugins disponíveis"
+
+#: ../DMC_View.py:745
+msgid "Options"
+msgstr "Opções"
+
+#: ../DMC_Plugins/DMC_AutoSync.py:50
+msgid "%H:%M"
+msgstr "%H:%M"
+
+#: ../DMC_Plugins/DMC_AutoSync.py:102
+msgid "Autosync Database on start"
+msgstr "Sincronizar automaticamente banco de dados no início do programa"
+
+#: ../DMC_Plugins/DMC_AutoSync.py:103
+msgid "Autosync time"
+msgstr "Sincronizar horário automaticamente"
+
+#: ../DMC_Plugins/DMC_AutoSync.py:107
+#: ../DMC_Plugins/DMC_AutoSync.py:109
+#: ../DMC_Plugins/DMC_AutoSync.py:110
+msgid "AutoSync"
+msgstr "Sincronização automática"
+
+#: ../DMC_Plugins/DMC_BackgroundDbLoader.py:84
+msgid "Autoload Database on start"
+msgstr "Carregar automaticamente o banco de dados no início do programa"
+
+#: ../DMC_Plugins/DMC_BackgroundDbLoader.py:88
+#: ../DMC_Plugins/DMC_BackgroundDbLoader.py:89
+msgid "BackgroundDbLoader"
+msgstr "BackgroundDbLoader"
+
+#: ../DMC_Plugins/DMC_DreamNetcast.py:25
+#: ../DMC_Plugins/DMC_DVDPlayer.py:34
+#: ../DMC_Plugins/DMC_FileBrowser.py:21
+#: ../DMC_Plugins/DMC_Foreca.py:22
+#: ../DMC_Plugins/DMC_JamendoLibrary.py:228
+#: ../DMC_Plugins/DMC_LastFM.py:22
+#: ../DMC_Plugins/DMC_MediaPlayer.py:32
+#: ../DMC_Plugins/DMC_MerlinMusicPlayer.py:35
+#: ../DMC_Plugins/DMC_MultiMediathek.py:31
+msgid "Show"
+msgstr "Show"
+
+#: ../DMC_Plugins/DMC_DreamNetcast.py:30
+#: ../DMC_Plugins/DMC_DreamNetcast.py:31
+msgid "Dreamnetcast"
+msgstr "Dreamnetcast"
+
+#: ../DMC_Plugins/DMC_DVDPlayer.py:39
+#: ../DMC_Plugins/DMC_DVDPlayer.py:40
+msgid "DVDPlayer"
+msgstr "DVDPlayer"
+
+#: ../DMC_Plugins/DMC_FileBrowser.py:26
+#: ../DMC_Plugins/DMC_FileBrowser.py:27
+msgid "Filebrowser"
+msgstr "Navegar pelos arquivos"
+
+# Que zorra é essa??
+#: ../DMC_Plugins/DMC_Foreca.py:27
+#: ../DMC_Plugins/DMC_Foreca.py:28
+msgid "Foreca"
+msgstr "Foreca"
+
+#: ../DMC_Plugins/DMC_InternetTime.py:120
+msgid "Sync time on start"
+msgstr "Sincronizar o horário ao iniciar"
+
+#: ../DMC_Plugins/DMC_InternetTime.py:124
+#: ../DMC_Plugins/DMC_InternetTime.py:125
+msgid "InternetTime"
+msgstr "Horário da internet"
+
+# que zorra é essa???
+#: ../DMC_Plugins/DMC_JamendoLibrary.py:233
+#: ../DMC_Plugins/DMC_JamendoLibrary.py:234
+msgid "Jamendo"
+msgstr "Jamendo"
+
+#: ../DMC_Plugins/DMC_LastFM.py:27
+#: ../DMC_Plugins/DMC_LastFM.py:28
+msgid "LastFM"
+msgstr "LastFM"
+
+#: ../DMC_Plugins/DMC_MediaPlayer.py:37
+#: ../DMC_Plugins/DMC_MediaPlayer.py:38
+#: ../DMC_Plugins/DMC_MediaPlayer.py:39
+msgid "MediaPlayer"
+msgstr "Media Player"
+
+#: ../DMC_Plugins/DMC_MerlinMusicPlayer.py:40
+#: ../DMC_Plugins/DMC_MerlinMusicPlayer.py:41
+msgid "MerlinMusicPlayer"
+msgstr "Player de Música Merlin"
+
+#: ../DMC_Plugins/DMC_MultiMediathek.py:36
+#: ../DMC_Plugins/DMC_MultiMediathek.py:37
+msgid "MultiMediathek"
+msgstr "MultiMediathek"
+
+#: ../DMC_Plugins/DMC_MyEpisodes.py:45
+msgid "No Username"
+msgstr "Sem nome de usuário"
+
+#: ../DMC_Plugins/DMC_MyEpisodes.py:46
+msgid "No Password"
+msgstr "Sem senha"
+
+#: ../DMC_Plugins/DMC_MyEpisodes.py:50
+msgid "Enabled"
+msgstr "Ligado"
+
+#: ../DMC_Plugins/DMC_MyEpisodes.py:51
+msgid "Username"
+msgstr "Usuário"
+
+#: ../DMC_Plugins/DMC_MyEpisodes.py:52
+msgid "Password"
+msgstr "Senha"
+
+#: ../DMC_Plugins/DMC_MyEpisodes.py:86
+#: ../DMC_Plugins/DMC_MyEpisodes.py:87
+#: ../DMC_Plugins/DMC_MyEpisodes.py:88
+msgid "myepisodes"
+msgstr "Meus episódios"
+
+#: ../DMC_Plugins/DMC_NewestEpisodes.py:196
+msgid "days back"
+msgstr "Dias atrás"
+
+#: ../DMC_Plugins/DMC_NewestEpisodes.py:200
+#: ../DMC_Plugins/DMC_NewestEpisodes.py:202
+msgid "Newest Episodes"
+msgstr "Novos episódios"
+
+#: ../DMC_Plugins/DMC_PicturePlayer.py:41
+#: ../DMC_Plugins/DMC_PicturePlayer.py:90
+#: ../DMC_Plugins/DMC_PicturePlayer.py:91
+msgid "PicturePlayer"
+msgstr "Player de imagens"
+
+#: ../DMC_Plugins/DMC_PicturePlayer.py:62
+msgid "PicturePlayer Setup"
+msgstr "Configurações do player de imagens"
+
+#: ../DMC_Plugins/DMC_Seen.py:90
+#: ../DMC_Plugins/DMC_Seen.py:91
+msgid "Seen"
+msgstr "Visto"
+
+#: ../DMC_Plugins/DMC_Seen.py:93
+msgid "Mark as Seen"
+msgstr "Marcar como visto"
+
+#: ../DMC_Plugins/DMC_Seen.py:94
+msgid "Mark as Unseen"
+msgstr "Marcar como não visto"
+
+#: ../DMC_Plugins/DMC_SqliteCheck.py:59
+msgid "Sqlite Check"
+msgstr "Verificação do sqlite"
+
+#: ../DMC_Plugins/DMC_SubtitleDownloader.py:79
+msgid "Provider"
+msgstr "Provedor"
+
+#: ../DMC_Plugins/DMC_SubtitleDownloader.py:80
+msgid "Language1"
+msgstr "Idioma 1"
+
+#: ../DMC_Plugins/DMC_SubtitleDownloader.py:81
+msgid "Language2"
+msgstr "Idioma 2"
+
+#: ../DMC_Plugins/DMC_SubtitleDownloader.py:82
+msgid "Language3"
+msgstr "Idioma 3"
+
+#: ../DMC_Plugins/DMC_SubtitleDownloader.py:238
+msgid "SubtitleDownloader"
+msgstr "Baixador de legenda"
+
+#: ../DMC_Plugins/DMC_SubtitleDownloader.py:240
+msgid "Download subtitles"
+msgstr "Baixar legendas"
+
+#: ../DMC_Plugins/DMC_Sync.py:39
+msgid "Fast Sync on autostart"
+msgstr "Sincronização rápida quando o programa iniciar"
+
+#: ../DMC_Plugins/DMC_Trakt.py:120
+#: ../DMC_Plugins/DMC_Trakt.py:121
+#: ../DMC_Plugins/DMC_Trakt.py:122
+msgid "trakt.tv"
+msgstr "trakt.tv"
+
+#: ../DMC_Plugins/DMC_WebInterface.py:114
+msgid "Port"
+msgstr "Porta"
+
+#: ../DMC_Plugins/DMC_WebInterface.py:116
+msgid "Entry"
+msgstr "Entrada"
+
+#: ../DMC_Plugins/DMC_WebInterface.py:120
+#: ../DMC_Plugins/DMC_WebInterface.py:121
+msgid "WebInterface"
+msgstr "Interface web"
+
+#: ../DMC_Plugins/DMC_YTTrailer.py:44
+msgid "YTTrailer"
+msgstr "YTTrailer"
+
+#: ../DMC_Plugins/DMC_YTTrailer.py:44
+msgid "View Trailer (YTTrailer by Dr. Best)"
+msgstr "Ver trailer (YTTrailer por Dr. Best)"
+
+#: ../DMC_Plugins/DMC_SyncExtras/plugin.py:118
+msgid "Select"
+msgstr "Selecionar"
+
+#: ../DMC_Plugins/DMC_SyncExtras/plugin.py:134
+msgid "Add Path"
+msgstr "Adicionar caminho"
+
+#: ../DMC_Plugins/DMC_SyncExtras/plugin.py:229
+msgid "Remove"
+msgstr "Remover"
+
+#: ../DMC_Plugins/DMC_SyncExtras/plugin.py:230
+msgid "Add"
+msgstr "Adicionar"
+
+#: ../DMC_Plugins/DMC_SyncExtras/plugin.py:232
+#: ../DMC_Plugins/DMC_SyncExtras/plugin.py:237
+#: ../DMC_Plugins/DMC_SyncExtras/plugin.py:914
+#: ../DMC_Plugins/DMC_SyncExtras/plugin.py:919
+msgid "More"
+msgstr "Mais"
+
+#: ../DMC_Plugins/DMC_SyncExtras/plugin.py:234
+msgid "Toggle Type"
+msgstr "Alternar tipo"
+
+#: ../DMC_Plugins/DMC_SyncExtras/plugin.py:235
+msgid "Toggle useFolder"
+msgstr "Alternar pasta de usuário"
+
+#: ../DMC_Plugins/DMC_SyncExtras/plugin.py:257
+msgid "Searchpaths"
+msgstr "Caminhos de busca"
+
+#: ../DMC_Plugins/DMC_SyncExtras/plugin.py:425
+msgid "Language"
+msgstr "Língua"
+
+#: ../DMC_Plugins/DMC_SyncExtras/plugin.py:428
+msgid "Delete database entry if file can not be found"
+msgstr "Excluir do banco de dados arquivos não encontrados"
+
+#: ../DMC_Plugins/DMC_SyncExtras/plugin.py:489
+msgid "Change searchpaths"
+msgstr "Mudar caminho de pesquisa"
+
+#: ../DMC_Plugins/DMC_SyncExtras/plugin.py:490
+msgid "Change settings"
+msgstr "Mudar definições"
+
+#: ../DMC_Plugins/DMC_SyncExtras/plugin.py:491
+msgid "Delete cache"
+msgstr "Excluir o cache"
+
+#: ../DMC_Plugins/DMC_SyncExtras/plugin.py:492
+msgid "Delete all posters/backdrops"
+msgstr "Excluir todos os cartazes/imagens de fundo"
+
+#: ../DMC_Plugins/DMC_SyncExtras/plugin.py:493
+msgid "Delete database"
+msgstr "Excluir banco de dados"
+
+#: ../DMC_Plugins/DMC_SyncExtras/plugin.py:494
+msgid "Reset filter"
+msgstr "Reiniciar filtro"
+
+#: ../DMC_Plugins/DMC_SyncExtras/plugin.py:542
+msgid "Cache successfully deleted..."
+msgstr "Cache excluído com sucesso..."
+
+#: ../DMC_Plugins/DMC_SyncExtras/plugin.py:544
+#, python-format
+msgid ""
+"Error while deleting cache:\n"
+" %s"
+msgstr ""
+"Erro ao excluir o cache:\n"
+" %s"
+
+#: ../DMC_Plugins/DMC_SyncExtras/plugin.py:548
+msgid "Arts successfully deleted..."
+msgstr "Artes excluídas com sucesso..."
+
+#: ../DMC_Plugins/DMC_SyncExtras/plugin.py:550
+#, python-format
+msgid ""
+"Error while deleting arts:\n"
+" %s"
+msgstr ""
+"Erro ao excluir as artes:\n"
+" %s"
+
+#: ../DMC_Plugins/DMC_SyncExtras/plugin.py:567
+msgid "Database successfully deleted..."
+msgstr "Banco de dados apagado com sucesso..."
+
+#: ../DMC_Plugins/DMC_SyncExtras/plugin.py:569
+#, python-format
+msgid ""
+"Error while deleting database:\n"
+" %s"
+msgstr ""
+"Erro ao excluir o banco de dados:\n"
+" %s"
+
+#: ../DMC_Plugins/DMC_SyncExtras/plugin.py:591
+msgid "Filter successfully resetted..."
+msgstr "Filtro reiniciado com sucesso..."
+
+#: ../DMC_Plugins/DMC_SyncExtras/plugin.py:593
+#, python-format
+msgid ""
+"Error while resetting filter:\n"
+" %s"
+msgstr ""
+"Erro ao reiniciar o filtro:\n"
+" %s"
+
+#: ../DMC_Plugins/DMC_SyncExtras/plugin.py:791
+msgid "Synchronize finished"
+msgstr "Sincronização finalizada"
+
+#: ../DMC_Plugins/DMC_SyncExtras/plugin.py:807
+#: ../DMC_Plugins/DMC_SyncExtras/plugin.py:1372
+msgid "Sync Manager"
+msgstr "Gerenciador de sincronismo"
+
+#: ../DMC_Plugins/DMC_SyncExtras/plugin.py:911
+#: ../DMC_Plugins/DMC_SyncExtras/plugin.py:1054
+msgid "Alternatives"
+msgstr "Alternativas"
+
+#: ../DMC_Plugins/DMC_SyncExtras/plugin.py:916
+msgid "IMDb ID"
+msgstr "IMDb ID"
+
+#: ../DMC_Plugins/DMC_SyncExtras/plugin.py:917
+msgid "IMDb ID (TV)"
+msgstr "IMDb ID (TV)"
+
+#: ../DMC_Plugins/DMC_SyncExtras/plugin.py:918
+msgid "Delete"
+msgstr "Excluir"
+
+#: ../DMC_Plugins/DMC_SyncExtras/plugin.py:926
+msgid "Path:"
+msgstr "Caminho:"
+
+#: ../DMC_Plugins/DMC_SyncExtras/plugin.py:927
+msgid "Filename:"
+msgstr "Nome do arquivo:"
+
+#: ../DMC_Plugins/DMC_SyncExtras/plugin.py:928
+msgid "Title:"
+msgstr "Título:"
+
+#: ../DMC_Plugins/DMC_SyncExtras/plugin.py:929
+#: ../DMC_Plugins/DMC_SyncExtras/plugin.py:1352
+msgid "Year:"
+msgstr "Ano:"
+
+#: ../DMC_Plugins/DMC_SyncExtras/plugin.py:930
+msgid "Season:"
+msgstr "Temporada:"
+
+#: ../DMC_Plugins/DMC_SyncExtras/plugin.py:931
+msgid "Episode:"
+msgstr "Episódio:"
+
+#: ../DMC_Plugins/DMC_SyncExtras/plugin.py:952
+msgid "Info"
+msgstr "Informações"
+
+#: ../DMC_Plugins/DMC_SyncExtras/plugin.py:1011
+msgid "IMDb ID without tt"
+msgstr "IMDb ID sem tt"
+
+#: ../DMC_Plugins/DMC_SyncExtras/plugin.py:1026
+msgid "IMDb ID for TV Show without tt"
+msgstr "IMDb para seriados sem tt"
+
+#: ../DMC_Plugins/DMC_SyncExtras/plugin.py:1044
+msgid "No alternatives found"
+msgstr "Não foram encontradas alternativas"
+
+#: ../DMC_Plugins/DMC_SyncExtras/plugin.py:1146
+#: ../DMC_Plugins/DMC_SyncExtras/plugin.py:1181
+#: ../DMC_Plugins/DMC_SyncExtras/plugin.py:1190
+#: ../DMC_Plugins/DMC_SyncExtras/plugin.py:1195
+#: ../DMC_Plugins/DMC_SyncExtras/plugin.py:1200
+msgid "Failed"
+msgstr "Falhou"
+
+#: ../DMC_Plugins/DMC_SyncExtras/plugin.py:1148
+msgid "TVShows"
+msgstr "Seriados"
+
+#: ../DMC_Plugins/DMC_SyncExtras/plugin.py:1150
+msgid "TVShows (All)"
+msgstr "Seriados (todos)"
+
+#: ../DMC_Plugins/DMC_SyncExtras/plugin.py:1185
+msgid "Failed (All)"
+msgstr "Falhou (todos)"
+
+#: ../DMC_Plugins/DMC_SyncExtras/plugin.py:1338
+#: ../DMC_Plugins/DMC_SyncExtras/plugin.py:1410
+msgid "Manage"
+msgstr "Gerenciar"
+
+# Precisa confirmar se é Completar ou completa.
+#: ../DMC_Plugins/DMC_SyncExtras/plugin.py:1339
+#: ../DMC_Plugins/DMC_SyncExtras/plugin.py:1411
+msgid "Complete Sync"
+msgstr "Sincronização completa"
+
+#: ../DMC_Plugins/DMC_SyncExtras/plugin.py:1340
+#: ../DMC_Plugins/DMC_SyncExtras/plugin.py:1412
+msgid "Normal Sync"
+msgstr "Sincronização normal"
+
+#: ../DMC_Plugins/DMC_SyncExtras/plugin.py:1343
+msgid "Please press the green button to start synchronize!\n"
+msgstr "Por favor, pressione o botão verde para iniciar a sincronização!\n"
+
+#: ../DMC_Plugins/DMC_SyncExtras/plugin.py:1349
+msgid "Log:"
+msgstr "Registro:"
+
+#: ../DMC_Plugins/DMC_SyncExtras/plugin.py:1350
+msgid "Progress:"
+msgstr "Progresso:"
+
+#: ../DMC_Plugins/DMC_SyncExtras/plugin.py:1351
+msgid "Last:"
+msgstr "Último:"
+
+#: ../DMC_Plugins/DMC_SyncExtras/plugin.py:1353
+msgid "Name:"
+msgstr "Nome:"
+
+#: ../DMC_Plugins/DMC_SyncExtras/plugin.py:1406
+msgid "Hide"
+msgstr "Esconder"
+
+#: ../DMC_Plugins/DMC_SyncExtras/plugin.py:1407
+msgid "Abort"
+msgstr "Abortar"
+
+#: ../DMC_Plugins/DMC_SyncExtras/PVS_DatabaseHandler.py:254
+msgid ""
+"\n"
+"Converting data to V2.... \n"
+"\n"
+"Please wait... "
+msgstr ""
+"\n"
+"Convertendo data para a versão 2.... \n"
+"\n"
+"Por favor, aguarde..."
+
+#: ../DMC_Plugins/DMC_SyncExtras/PVS_DatabaseHandlerPICKLE.py:1286
+msgid ""
+"\n"
+"Converting data to version 5.... \n"
+"\n"
+"Please wait... "
+msgstr ""
+"\n"
+"Convertendo data para a versão 5.... \n"
+"\n"
+"Por favor, aguarde..."
+
+#: ../DMC_Plugins/DMC_SyncExtras/PVS_DatabaseHandlerPICKLEV2.py:1169
+msgid ""
+"\n"
+"Converting data to version 6.... \n"
+"\n"
+"Please wait... "
+msgstr ""
+"\n"
+"Convertendo data para a versão 6.... \n"
+"\n"
+"Por favor, aguarde..."
+
+#: ../DMC_Plugins/DMC_SyncExtras/sync.py:193
+msgid "Thread running"
+msgstr "Processo em execução"
+
+#: ../DMC_Plugins/DMC_SyncExtras/sync.py:207
+msgid "Loading Config"
+msgstr "Carregando configurações"
+
+#: ../DMC_Plugins/DMC_SyncExtras/sync.py:211
+msgid "Loading Data"
+msgstr "Carregando dados"
+
+#: ../DMC_Plugins/DMC_SyncExtras/sync.py:220
+#: ../DMC_Plugins/DMC_SyncExtras/sync.py:529
+msgid "Saving database"
+msgstr "Salvando banco de dados"
+
+#: ../DMC_Plugins/DMC_SyncExtras/sync.py:225
+#: ../DMC_Plugins/DMC_SyncExtras/sync.py:540
+msgid "Done"
+msgstr "Pronto!"
+
+#: ../DMC_Plugins/DMC_SyncExtras/sync.py:228
+#: ../DMC_Plugins/DMC_SyncExtras/sync.py:543
+msgid "Press Exit / Back"
+msgstr "Pressione sair/voltar"
+
+#: ../DMC_Plugins/DMC_SyncExtras/sync.py:244
+msgid "Loading Replacements"
+msgstr "Carregando substituições"
+
+#: ../DMC_Plugins/DMC_SyncExtras/sync.py:257
+msgid "Loading Filesystem"
+msgstr "Carregando arquivos de sistemas"
+
+#: ../DMC_Plugins/DMC_SyncExtras/sync.py:266
+msgid "Extensions:"
+msgstr "Extensões:"
+
+#: ../DMC_Plugins/DMC_SyncExtras/sync.py:269
+msgid "Searching for media files"
+msgstr "Procurando por arquivos de mídia"
+
+#: ../DMC_Plugins/DMC_SyncExtras/sync.py:298
+#: ../DMC_Plugins/DMC_SyncExtras/sync.py:301
+msgid "Found"
+msgstr "Encontrado"
+
+#: ../DMC_Plugins/DMC_SyncExtras/sync.py:298
+#: ../DMC_Plugins/DMC_SyncExtras/sync.py:301
+msgid "media files"
+msgstr "Arquivos de mídia"
+
+#: ../DMC_Plugins/DMC_SyncExtras/sync.py:533
+msgid "Saving Filesystem"
+msgstr "Salvando arquivos do sistema"
+
