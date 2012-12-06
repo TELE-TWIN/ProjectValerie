@@ -28,12 +28,12 @@ print "[PVMC STARTING] I  __init__:: Init Valerie"
 
 # the currentVersion should be renewed every major update
 currentVersion          = "r001"
-defaultPluginFolderPath = resolveFilename(SCOPE_PLUGINS, "Extensions/ProjectValerie/")
+defaultPluginFolderPath = resolveFilename(SCOPE_PLUGINS, "Extensions/PVMC/")
 defaultSkinFolderPath   = defaultPluginFolderPath + "skins/"
 defaultConfigFolderPath = "/hdd/valerie/"
 defaultMediaFolderPath  = defaultConfigFolderPath + "media/"
 defaultTmpFolderPath    = "/tmp/valerie/"
-defaultSkin             = "blackSwan"
+defaultSkin             = "blackDon"
 defaultURL              = "http://val.duckbox.info/"
 defaultUpdateXML        = "update.php"
 
