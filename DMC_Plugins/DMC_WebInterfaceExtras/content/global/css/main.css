@@ -1,0 +1,274 @@
+html,body {
+	background: none repeat scroll 0 0 #555555;
+	font-family: Tahoma, Sans-Serif;
+	font-size: 11px;
+	font-weight: bold;
+}
+
+div .textheader {
+	background: none repeat scroll 0 0 black;
+    color: #FFFFFF;
+	padding-left: 10px;
+	height: 15px;
+}
+
+#content a {
+	color: #555555;
+}
+
+
+#about {
+	color: #555555;
+}
+
+div .text{
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-bottom: 10px;
+	padding-right: 10px;
+	text-align: justify;
+	color: #555555;
+}
+
+div .subheader {
+	background: none repeat scroll 0 0 #AAAAAA;
+	padding-left: 10px;
+}
+
+td {
+	word-wrap: break-word;
+}
+
+#container {
+    margin: 0 auto;
+    text-align: left;
+    width: 990px;
+}
+
+#mainmenu {
+	background: none repeat scroll 0 0 #000000;
+	border-radius: 5px 5px 5px 5px;
+	height: 65px;
+	margin-bottom: 8px;
+	padding-left: 5px;
+	width: 990px;
+}
+
+#banner {
+    margin-bottom: 5px;
+    padding-left: 2px;
+    padding-top: 6px;
+}
+
+#submenu {
+    background: none repeat scroll 0 0 #000000;
+    border-radius: 5px 5px 5px 5px;
+    margin-bottom: 8px;
+    padding-bottom: 1px;
+    padding-left: 5px;
+    /*padding-right: 3px;*/
+    width: 990px;
+	height: 38px;
+}
+
+#content {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 2px solid #000000;
+    border-radius: 5px 5px 5px 5px;
+    margin-bottom: 8px;
+    width: 990px;
+    /*min-height: 768px;*/
+	/*overflow: auto;*/
+	/*margin: auto; /* Div soll zentriert werden */
+	min-height: 768px; /* Mindesthöhe für moderne Browser */
+	height:auto !important; /* Important Regel für moderne Browser */
+	height:100%; /* Mindesthöhe für den IE */
+	overflow: hidden !important; /* FF Scroll-leiste */ 
+}
+
+
+#mainmenu
+ul {
+	background: none repeat scroll 0 0 #000000;
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 0;
+	text-align: center;
+	display: inline;
+	float: left;
+}
+
+#mainmenu
+li {
+    background: none repeat scroll 0 0 #485052;
+	border-radius: 5px 5px 5px 5px;
+	float: left;
+	list-style: none outside none;
+	margin-bottom: 0;
+	margin-left: 2px;
+	margin-top: 8px;
+	padding: 0;
+	width: 110px;
+}
+
+#mainmenu
+a:link,a:visited {
+	display: block;
+	width: 102px;
+	font-weight: bold;
+	color: #FFFFFF;
+	background-color: #98bfimport cgi21;
+	text-align: center;
+	padding: 4px;
+	text-decoration: none;
+}
+
+#mainmenu
+a:hover,a:active {
+	background: none repeat scroll 0 0 #AAAAAA;
+	border-radius: 5px 5px 5px 5px;
+}
+
+#submenu
+ul {
+	background: none repeat scroll 0 0 #000000;
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 0;
+	text-align: center;
+	display: inline;
+	float: left;
+}
+
+#submenu
+li {
+	background: none repeat scroll 0 0 #485052;
+	border-radius: 5px 5px 5px 5px;
+	float: left;
+	list-style: none outside none;
+	margin-bottom: 0;
+	margin-left: 2px;
+	margin-top: 9px;
+	padding: 0;
+	width: 110px;
+}
+
+#submenu
+a:link,a:visited {
+	display: block;
+	width: 102px;
+	font-weight: bold;
+	color: #FFFFFF;
+	background-color: #98bfimport cgi21;
+	text-align: center;
+	padding: 4px;
+	text-decoration: none;
+}
+
+#submenu
+a:hover,a:active {
+	background: none repeat scroll 0 0 #AAAAAA;
+	border-radius: 5px 5px 5px 5px;
+}
+
+#entries {
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	border-collapse: collapse;
+}
+
+#entries td, #entries th {
+	font-size: 1em;
+	border: 1px solid #000000;
+	padding: 3px 7px 2px 7px;
+}
+
+#entries th {
+	font-size: 1.1em;
+	text-align: left;
+	padding-top: 5px;
+	padding-bottom: 4px;
+	background-color: #000000;
+	color: #ffffff;
+}
+
+#entries 
+tr {
+	color: #485052;
+	background-color: #CCCCCC
+}
+
+#entries 
+tr.alt {
+	color: #485052;
+	background-color: #FFFFFF;
+}
+
+#entries 
+tr:hover {
+	color: #485052;
+	background-color: #AAAAAA;
+}
+
+#mform {
+	color: #FFFFFF;
+	padding-top: 7px;
+}
+
+img {border: none; }
+
+.action_img {
+	padding: 1px;
+	border: none;
+}
+
+/*Create a generic 'image' class*/
+.image { background-repeat: no-repeat; background-color: transparent; display: block; /* any other common features */ }
+
+.imgDelete
+{
+ width:16px;
+ height:16px;
+ border: none;
+ background-image:url(/content/global/img/delete-grey.png);
+ background-repeat: no-repeat; background-color: transparent;
+}
+ 
+.imgEdit
+{
+ width:16px;
+ height:16px;
+ background-image:url(/content/global/img/edit-grey.png);
+ background-repeat: no-repeat; background-color: transparent;
+}
+
+.sm_save {
+	color: blue;/* #ffffff;*/
+	background-color: #ff0000;
+	border-radius: 5px;
+}
+
+.requiredlabel{
+	/*background-image:url(/content/global/img/required-field.png);
+	background-position:top right;
+	background-repeat:no-repeat;
+	padding-right:10px;
+	*/
+}
+
+.requiredfield{
+	background-color:#FFE3E3
+}
+.center{
+	text-align:center;
+}
+.small{
+	width: 50px;
+}
+.medium{
+	width: 350px;
+}
+.large{
+	width: 500px;
+}

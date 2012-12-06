@@ -1,0 +1,9 @@
+<th width="10px"></th>
+<th width="65px">Poster</th>
+<th class="sortfirstasc">Name</th>
+<th width="25px">S</th>
+<th width="25px">E</th>
+<th width="45px">Year</th>
+<th width="100px">ImdbId</th>
+<th width="70px">TvDbId</th>
+<th width="130px">Actions</th>

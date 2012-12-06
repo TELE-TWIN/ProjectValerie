@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wizard>
+	<step id="welcome" nextstep="autostart">
+		<text value="Welcome to the Project Valerie experiment" />
+		<code>
+self["textTop"].setText(" ")
+self["textCenter"].setText("This Wizard allows you to setup Project Valerie")
+self["textBottom"].setText("Press OK to continue")
+		</code>
+	</step>
+	<step id="autostart" nextstep="checkforupdate">
+		<text value="Autostart configuration" />
+		<list evaluation="autostart" onselect="autostart">
+			<listentry caption="Yes" step="yes" />
+			<listentry caption="No" step="no" />
+		</list>
+		<code>
+self["textTop"].setText("Should Project Valerie automatically start?")
+self["textCenter"].setText(" ")
+self["textBottom"].setText("Press OK to continue")
+		</code>
+	</step>
+	<step id="checkforupdate" nextstep="language">
+		<text value="Update configuration" />
+		<list evaluation="checkforupdate" onselect="checkforupdate">
+			<listentry caption="Yes" step="yes" />
+			<listentry caption="No" step="no" />
+		</list>
+		<code>
+self["textTop"].setText("Should Project Valerie check for updates on start?")
+self["textCenter"].setText(" ")
+self["textBottom"].setText("Press OK to continue")
+		</code>
+	</step>
+	<step id="language" nextstep="preend">
+		<text value="Language configuration" />
+		<list evaluation="language" onselect="language">
+			<listentry caption="English" step="en" />
+			<listentry caption="German" step="de" />
+			<listentry caption="Italian" step="it" />
+			<listentry caption="Spanish" step="es" />
+			<listentry caption="French" step="fr" />
+			<listentry caption="Portuguese" step="pt" />
+		</list>
+		<code>
+self["textTop"].setText("Which language should be used to sync movies/tvshows?")
+self["textCenter"].setText(" ")
+self["textBottom"].setText("Press OK to continue")
+		</code>
+	</step>
+	<step id="preend" nextstep="end">
+		<text value=" " />
+		<code>
+self["textTop"].setText(" ")
+self["textCenter"].setText("All configurations saved")
+self["textBottom"].setText("Press OK to continue")
+self.saveConfig()
+		</code>
+	</step>
+	<step id="end">
+		<code>
+self.finishUp()
+self.close()
+		</code>
+	</step>
+</wizard>
