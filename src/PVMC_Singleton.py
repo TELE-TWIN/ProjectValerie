@@ -31,7 +31,6 @@ class Singleton:
     singlton config object
     """
     __we_are_one = {}
-    __plexInstance = ""
     __logFileInstance = ""
 
     def __init__(self):

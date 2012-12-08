@@ -10,8 +10,8 @@ from Screens.WizardLanguage import WizardLanguage
 
 from StillPicture import StillPicture
 
-from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.Config import SyncConfig
-from Plugins.Extensions.ProjectValerie.__common__ import printl2 as printl
+from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.Config import SyncConfig
+from Plugins.Extensions.PVMC.__common__ import printl2 as printl
 
 #------------------------------------------------------------------------------------------
 

@@ -6,7 +6,7 @@ import Genres
 import Utf8
 import WebGrabber
 
-from Plugins.Extensions.ProjectValerie.__common__ import printl2 as printl
+from Plugins.Extensions.PVMC.__common__ import printl2 as printl
 
 #------------------------------------------------------------------------------------------
 

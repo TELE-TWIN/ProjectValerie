@@ -2,8 +2,8 @@
 from Components.config import *
 from Components.config import ConfigSubsection
 from Components.config import ConfigYesNo
-from Plugins.Extensions.ProjectValerie.__common__ import printl2 as printl
-from Plugins.Extensions.ProjectValerie.__plugin__ import Plugin, registerPlugin
+from Plugins.Extensions.PVMC.__common__ import printl2 as printl
+from Plugins.Extensions.PVMC.__plugin__ import Plugin, registerPlugin
 
 config.plugins.pvmc.plugins.filebrowser = ConfigSubsection()
 config.plugins.pvmc.plugins.filebrowser.show = ConfigYesNo(default = True)

@@ -5,7 +5,7 @@
 from urllib import urlencode
 from Components.config import config
 
-from Plugins.Extensions.ProjectValerie.__common__ import printl2 as printl
+from Plugins.Extensions.PVMC.__common__ import printl2 as printl
 
 import sys
 #------------------------------------------------------------------------------------------
@@ -30,7 +30,7 @@ class WebData():
 	def getData(self, type, param=None):
 		global Manager
 		if Manager is None:
-			from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.Manager import Manager
+			from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.Manager import Manager
 		
 		global ManagerInstance
 		if ManagerInstance is None:
@@ -72,7 +72,7 @@ class WebData():
 			dataRows = ManagerInstance.MarkAsUnseen(param, userId)
 			
 		elif type == "options.global":
-			from Plugins.Extensions.ProjectValerie.__plugin__ import getPlugins, Plugin
+			from Plugins.Extensions.PVMC.__plugin__ import getPlugins, Plugin
 			dataRows = []
 			plugins = getPlugins(where=Plugin.SETTINGS)
 			for plugin in plugins: 
@@ -84,7 +84,7 @@ class WebData():
 						text = "%s" % (pluginSetting[0], )
 					dataRows.append((text, pluginSetting[1]))
 		elif type == "options.sync":
-			from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.PathsConfig import PathsConfig
+			from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.PathsConfig import PathsConfig
 			dataRows = PathsConfig().getInstance()
 		
 		return dataRows

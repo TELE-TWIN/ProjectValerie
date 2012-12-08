@@ -4,8 +4,8 @@ from Components.config import config
 from Components.config import ConfigYesNo
 from Components.config import ConfigSubsection
 
-from Plugins.Extensions.ProjectValerie.__common__ import printl2 as printl, isInetAvailable
-from Plugins.Extensions.ProjectValerie.__plugin__ import Plugin, registerPlugin
+from Plugins.Extensions.PVMC.__common__ import printl2 as printl, isInetAvailable
+from Plugins.Extensions.PVMC.__plugin__ import Plugin, registerPlugin
 
 from Components.Language import language
 import gettext
@@ -17,10 +17,10 @@ def localeInit():
 	os.environ["LANGUAGE"] = lang[:2]
 	gettext.bindtextdomain("enigma2", resolveFilename(SCOPE_LANGUAGE))
 	gettext.textdomain("enigma2")
-	gettext.bindtextdomain("ProjectValerie", "%s%s" % (resolveFilename(SCOPE_PLUGINS), "Extensions/ProjectValerie/locale/"))
+	gettext.bindtextdomain("PVMC", "%s%s" % (resolveFilename(SCOPE_PLUGINS), "Extensions/PVMC/locale/"))
 
 def _(txt):
-	t = gettext.dgettext("ProjectValerie", txt)
+	t = gettext.dgettext("PVMC", txt)
 	if t == txt:
 		t = gettext.gettext(txt)
 	return t
@@ -41,15 +41,15 @@ def settings():
 
 def autostartPlugin(session):
 	if isInetAvailable():
-		from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.plugin import autostart
+		from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.plugin import autostart
 		autostart(session)
 	else:
 		printl("Can not sync as no internet connection available!", __name__, "W")
 
 def startPlugin(session):
 	if isInetAvailable():
-		from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.plugin import ProjectValerieSync
-		session.open(ProjectValerieSync)
+		from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.plugin import PVMCSync
+		session.open(PVMCSync)
 	else:
 		from Screens.MessageBox import MessageBox
 		session.open(MessageBox,_("No internet connection available!"), MessageBox.TYPE_INFO, timeout=10)

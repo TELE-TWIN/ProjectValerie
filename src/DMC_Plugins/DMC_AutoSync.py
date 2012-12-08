@@ -11,8 +11,8 @@ from Components.config import ConfigDateTime
 from RecordTimer import RecordTimerEntry
 from ServiceReference import ServiceReference
 
-from Plugins.Extensions.ProjectValerie.__common__ import printl2 as printl
-from Plugins.Extensions.ProjectValerie.__plugin__ import Plugin, registerPlugin
+from Plugins.Extensions.PVMC.__common__ import printl2 as printl
+from Plugins.Extensions.PVMC.__plugin__ import Plugin, registerPlugin
 
 #------------------------------------------------------------------------------------------
 
@@ -26,10 +26,10 @@ def localeInit():
 	os.environ["LANGUAGE"] = lang[:2]
 	gettext.bindtextdomain("enigma2", resolveFilename(SCOPE_LANGUAGE))
 	gettext.textdomain("enigma2")
-	gettext.bindtextdomain("ProjectValerie", "%s%s" % (resolveFilename(SCOPE_PLUGINS), "Extensions/ProjectValerie/locale/"))
+	gettext.bindtextdomain("PVMC", "%s%s" % (resolveFilename(SCOPE_PLUGINS), "Extensions/PVMC/locale/"))
 
 def _(txt):
-	t = gettext.dgettext("ProjectValerie", txt)
+	t = gettext.dgettext("PVMC", txt)
 	if t == txt:
 		t = gettext.gettext(txt)
 	return t
@@ -64,8 +64,8 @@ def autostart(session):
 		printl("Planed Time in Range...", "DMC_AutoSync::autostart", "I")
 		global gSession
 		gSession = session
-		from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.plugin import ProjectValerieSync
-		session.openWithCallback(callback, ProjectValerieSync, autoSync=True)
+		from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.plugin import PVMCSync
+		session.openWithCallback(callback, PVMCSync, autoSync=True)
 	printl("Planed Time NOT in Range!", "DMC_AutoSync::autostart", "I")
 
 def getPlanedTime():
@@ -90,7 +90,7 @@ def getPlanedTime():
 def callback():
 	printl("->", "DMC_AutoSync::callback", "I")
 	global gSession
-	from Plugins.Extensions.ProjectValerie.DMC_Global import PowerManagement
+	from Plugins.Extensions.PVMC.DMC_Global import PowerManagement
 	PowerManagement(gSession).standby()
 
 def wakeup():
@@ -107,6 +107,6 @@ def settings():
 
 if gAvailable is True:
 	registerPlugin(Plugin(id="autosync", name=_("AutoSync"), fnc=settings, where=Plugin.SETTINGS))
-	from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.plugin import ProjectValerieSync
+	from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.plugin import PVMCSync
 	registerPlugin(Plugin(id="autosync", name=_("AutoSync"), fnc=autostart, where=Plugin.AUTOSTART_DELAYED, weight=10000))
 	registerPlugin(Plugin(id="autosync", name=_("AutoSync"), fnc=wakeup, where=Plugin.WAKEUP))

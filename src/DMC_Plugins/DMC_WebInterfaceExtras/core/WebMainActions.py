@@ -9,10 +9,10 @@ from urllib import urlencode, quote
 from Components.config import config
 from twisted.web.resource import Resource
 
-from Plugins.Extensions.ProjectValerie.__common__ import printl2 as printl
-from Plugins.Extensions.ProjectValerie.DMC_Global import Update
-from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_WebInterfaceExtras.core.WebData import WebData
-from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_WebInterfaceExtras.core.WebHelper import WebHelper
+from Plugins.Extensions.PVMC.__common__ import printl2 as printl
+from Plugins.Extensions.PVMC.DMC_Global import Update
+from Plugins.Extensions.PVMC.DMC_Plugins.DMC_WebInterfaceExtras.core.WebData import WebData
+from Plugins.Extensions.PVMC.DMC_Plugins.DMC_WebInterfaceExtras.core.WebHelper import WebHelper
 #------------------------------------------------------------------------------------------
 
 # +++ LAZY IMPORTS +++
@@ -38,9 +38,9 @@ class Home(Resource):
 		global utf8ToLatin
 		global Manager
 		if utf8ToLatin is None:
-			from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.Utf8 import utf8ToLatin
+			from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.Utf8 import utf8ToLatin
 		if Manager is None:
-			from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.Manager import Manager
+			from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.Manager import Manager
 			
 		finalOutput = WebHelper().getHtmlCore("Home")
 		
@@ -81,9 +81,9 @@ class Movies(Resource):
 		global MediaInfo
 		global utf8ToLatin
 		if MediaInfo is None:
-			from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.MediaInfo import MediaInfo
+			from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.MediaInfo import MediaInfo
 		if utf8ToLatin is None:
-			from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.Utf8 import utf8ToLatin
+			from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.Utf8 import utf8ToLatin
 				
 		finalOutput = WebHelper().getHtmlCore("Movies", True)
 			
@@ -190,9 +190,9 @@ class TvShows(Resource):
 		global MediaInfo
 		global utf8ToLatin
 		if MediaInfo is None:
-			from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.MediaInfo import MediaInfo
+			from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.MediaInfo import MediaInfo
 		if utf8ToLatin is None:
-			from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.Utf8 import utf8ToLatin
+			from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.Utf8 import utf8ToLatin
 	
 		finalOutput = WebHelper().getHtmlCore("TvShows", True)
 			
@@ -276,9 +276,9 @@ class Episodes(Resource):
 		global MediaInfo
 		global utf8ToLatin
 		if MediaInfo is None:
-			from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.MediaInfo import MediaInfo
+			from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.MediaInfo import MediaInfo
 		if utf8ToLatin is None:
-			from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.Utf8 import utf8ToLatin
+			from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.Utf8 import utf8ToLatin
 		
 		finalOutput = WebHelper().getHtmlCore("Episodes", True)
 		finalOutput = finalOutput.replace("<!-- CUSTOM_TITLE -->", " - Episodes")
@@ -389,9 +389,9 @@ class Failed(Resource):
 		global MediaInfo
 		global utf8ToLatin
 		if MediaInfo is None:
-			from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.MediaInfo import MediaInfo
+			from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.MediaInfo import MediaInfo
 		if utf8ToLatin is None:
-			from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.Utf8 import utf8ToLatin
+			from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.Utf8 import utf8ToLatin
 				
 		finalOutput = WebHelper().getHtmlCore("Failed", True)
 
@@ -500,7 +500,7 @@ class Options (Resource):
 	def action(self, request):
 		global utf8ToLatin
 		if utf8ToLatin is None:
-			from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.Utf8 import utf8ToLatin
+			from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.Utf8 import utf8ToLatin
 		
 		finalOutput = WebHelper().getHtmlCore("Options")
 				
@@ -519,7 +519,7 @@ class GlobalSetting (Resource):
 	def action(self, request):
 		global utf8ToLatin
 		if utf8ToLatin is None:
-			from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.Utf8 import utf8ToLatin
+			from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.Utf8 import utf8ToLatin
 				
 		finalOutput = WebHelper().getHtmlCore("Options" , True, "Global")
 		
@@ -565,7 +565,7 @@ class SyncSettings (Resource):
 	def action(self, request):
 		global utf8ToLatin
 		if utf8ToLatin is None:
-			from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.Utf8 import utf8ToLatin
+			from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.Utf8 import utf8ToLatin
 		
 		finalOutput = WebHelper().getHtmlCore("Options" , True, "Sync")
 						
@@ -705,7 +705,7 @@ class Logs (Resource):
 	def action(self, request):
 		global utf8ToLatin
 		if utf8ToLatin is None:
-			from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.Utf8 import utf8ToLatin
+			from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.Utf8 import utf8ToLatin
 		
 		finalOutput = WebHelper().getHtmlCore("Logs")
 	
@@ -724,9 +724,9 @@ class Sync (Resource):
 	def action(self, request):
 		global utf8ToLatin
 		if utf8ToLatin is None:
-			from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.Utf8 import utf8ToLatin
+			from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.Utf8 import utf8ToLatin
 			
-		from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.plugin import getSyncInfoInstance
+		from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.plugin import getSyncInfoInstance
 		syncInfo = getSyncInfoInstance()
 		isRunning = syncInfo.inProgress
 		isFinished = syncInfo.isFinished
@@ -765,7 +765,7 @@ class Valerie (Resource):
 	def action(self, request):
 		global utf8ToLatin
 		if utf8ToLatin is None:
-			from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.Utf8 import utf8ToLatin
+			from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.Utf8 import utf8ToLatin
 		
 		finalOutput = WebHelper().getHtmlCore("Logs" , False, "Valerie")
 	
@@ -784,7 +784,7 @@ class Enigma (Resource):
 	def action(self, request):
 		global utf8ToLatin
 		if utf8ToLatin is None:
-			from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.Utf8 import utf8ToLatin
+			from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.Utf8 import utf8ToLatin
 				
 		finalOutput = WebHelper().getHtmlCore("Logs" , False, "Enigma")
 	
@@ -803,7 +803,7 @@ class Extras (Resource):
 	def action(self, request):
 		global utf8ToLatin
 		if utf8ToLatin is None:
-			from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.Utf8 import utf8ToLatin
+			from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.Utf8 import utf8ToLatin
 		
 		finalOutput = WebHelper().getHtmlCore("Extras")
 	
@@ -822,7 +822,7 @@ class Backup (Resource):
 	def action(self, request):
 		global utf8ToLatin
 		if utf8ToLatin is None:
-			from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.Utf8 import utf8ToLatin
+			from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.Utf8 import utf8ToLatin
 				
 		finalOutput = WebHelper().getHtmlCore("Extras" , True, "Backup")
 	
@@ -841,7 +841,7 @@ class Restore (Resource):
 	def action(self, request):
 		global utf8ToLatin
 		if utf8ToLatin is None:
-			from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.Utf8 import utf8ToLatin
+			from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.Utf8 import utf8ToLatin
 		
 		finalOutput = WebHelper().getHtmlCore("Extras" , True, "Restore")
 	

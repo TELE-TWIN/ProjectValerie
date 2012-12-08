@@ -10,9 +10,9 @@ from Screens.ChoiceBox import ChoiceBox
 from Screens.InfoBar import MoviePlayer
 from Tools.Directories import resolveFilename, fileExists, pathExists, createDir, SCOPE_MEDIA, SCOPE_SKIN_IMAGE, SCOPE_PLUGINS, SCOPE_LANGUAGE
 
-from Plugins.Extensions.ProjectValerie.__common__ import printl2 as printl, getBoxtype
-from Plugins.Extensions.ProjectValerie.__plugin__ import getPlugins, Plugin, registerPlugin
-from Plugins.Extensions.ProjectValerie.DMC_Global import Update
+from Plugins.Extensions.PVMC.__common__ import printl2 as printl, getBoxtype
+from Plugins.Extensions.PVMC.__plugin__ import getPlugins, Plugin, registerPlugin
+from Plugins.Extensions.PVMC.DMC_Global import Update
 
 #------------------------------------------------------------------------------------------
 
@@ -21,10 +21,10 @@ def localeInit():
 	environ["LANGUAGE"] = lang[:2]
 	gettext.bindtextdomain("enigma2", resolveFilename(SCOPE_LANGUAGE))
 	gettext.textdomain("enigma2")
-	gettext.bindtextdomain("ProjectValerie", "%s%s" % (resolveFilename(SCOPE_PLUGINS), "Extensions/ProjectValerie/locale/"))
+	gettext.bindtextdomain("PVMC", "%s%s" % (resolveFilename(SCOPE_PLUGINS), "Extensions/PVMC/locale/"))
 
 def _(txt):
-	t = gettext.dgettext("ProjectValerie", txt)
+	t = gettext.dgettext("PVMC", txt)
 	if t == txt:
 		t = gettext.gettext(txt)
 	return t

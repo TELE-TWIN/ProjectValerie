@@ -7,10 +7,10 @@ from urllib import urlencode
 from Components.config import config
 from twisted.web.resource import Resource
 
-from Plugins.Extensions.ProjectValerie.__common__ import printl2 as printl
-from Plugins.Extensions.ProjectValerie.DMC_Global import Update
-from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_WebInterfaceExtras.core.WebData import WebData
-from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_WebInterfaceExtras.core.WebHelper import WebHelper
+from Plugins.Extensions.PVMC.__common__ import printl2 as printl
+from Plugins.Extensions.PVMC.DMC_Global import Update
+from Plugins.Extensions.PVMC.DMC_Plugins.DMC_WebInterfaceExtras.core.WebData import WebData
+from Plugins.Extensions.PVMC.DMC_Plugins.DMC_WebInterfaceExtras.core.WebHelper import WebHelper
 
 import os
 #------------------------------------------------------------------------------------------
@@ -37,13 +37,13 @@ class MediaForm(Resource):
 	def action(self, request):
 		global MediaInfo
 		if MediaInfo is None:
-			from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.MediaInfo import MediaInfo
+			from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.MediaInfo import MediaInfo
 		global utf8ToLatin
 		if utf8ToLatin is None:
-			from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.Utf8 import utf8ToLatin
+			from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.Utf8 import utf8ToLatin
 		global Manager
 		if Manager is None:
-			from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.Manager import Manager
+			from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.Manager import Manager
 		
 		finalOutput = WebHelper().getHtmlCore("MediaInfo", True)
 		
@@ -243,11 +243,11 @@ class Alternatives(Resource):
 		global MobileImdbComProvider
 		
 		if utf8ToLatin is None:
-			from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.Utf8 import utf8ToLatin
+			from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.Utf8 import utf8ToLatin
 		if MediaInfo is None:
-			from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.MediaInfo import MediaInfo
+			from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.MediaInfo import MediaInfo
 		if MobileImdbComProvider is None:
-			from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.MobileImdbComProvider import MobileImdbComProvider
+			from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.MobileImdbComProvider import MobileImdbComProvider
 				
 		finalOutput = WebHelper().getHtmlCore("Alternatives", True)
 		
@@ -329,7 +329,7 @@ class AddRecord (Resource):
 	def action(self, request):
 		global utf8ToLatin
 		if utf8ToLatin is None:
-			from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.Utf8 import utf8ToLatin
+			from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.Utf8 import utf8ToLatin
 		
 		finalOutput = WebHelper().getHtmlCore("AddRecord", True)
 	
@@ -352,13 +352,13 @@ class MediaActions(Resource):
 		global stringToUtf8
 		global MediaInfo
 		if Manager is None:
-			from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.Manager import Manager
+			from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.Manager import Manager
 		if stringToUtf8 is None:
-			from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.Utf8 import stringToUtf8
+			from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.Utf8 import stringToUtf8
 		if utf8ToLatin is None:
-			from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.Utf8 import utf8ToLatin
+			from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.Utf8 import utf8ToLatin
 		if MediaInfo is None:
-			from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.MediaInfo import MediaInfo
+			from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.MediaInfo import MediaInfo
 		
 		printl("request: " + str(request), self)
 		printl("request.args: " + str(request.args), self)
@@ -642,11 +642,11 @@ class WebFunctions(Resource):
 		global utf8ToLatin
 		global MediaInfo
 		if Manager is None:
-			from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.Manager import Manager
+			from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.Manager import Manager
 		if utf8ToLatin is None:
-			from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.Utf8 import utf8ToLatin
+			from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.Utf8 import utf8ToLatin
 		if MediaInfo is None:
-			from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.MediaInfo import MediaInfo
+			from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.MediaInfo import MediaInfo
 		
 		printl("request: " + str(request), self)
 		printl("request.args: " + str(request.args), self)
@@ -701,7 +701,7 @@ class WebFunctions(Resource):
 					
 					path = {"directory": directory, "enabled": enabled, "usefolder": useFolder, "type": typeFolder}
 					action = "standard"
-					from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.PathsConfig import PathsConfig
+					from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.PathsConfig import PathsConfig
 					if directory == "":
 						action = "delete"
 					PathsConfig().getInstance().setPath(id, path, action)
@@ -710,7 +710,7 @@ class WebFunctions(Resource):
 				elif request.args["section"][0] == "filetypes":
 					printl("argument => section = filetypes", self, "I")
 					value = request.args["value"][0]
-					from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.PathsConfig import PathsConfig
+					from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.PathsConfig import PathsConfig
 					PathsConfig().getInstance().setFileTypes(value.split("|"))
 					PathsConfig().getInstance().save()
 			
@@ -774,11 +774,11 @@ class SyncFunctions(Resource):
 		global utf8ToLatin
 		global MediaInfo
 		if Manager is None:
-			from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.Manager import Manager
+			from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.Manager import Manager
 		if utf8ToLatin is None:
-			from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.Utf8 import utf8ToLatin
+			from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.Utf8 import utf8ToLatin
 		if MediaInfo is None:
-			from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.MediaInfo import MediaInfo
+			from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.MediaInfo import MediaInfo
 		
 		#printl("request: " + str(request), self)
 		#printl("request.args: " + str(request.args), self)
@@ -790,8 +790,8 @@ class SyncFunctions(Resource):
 		##########################
 		if request.args["mode"][0] == "normalSync":
 			printl("mode (normalSync)", self, "I")
-			from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.plugin import getSyncInfoInstance
-			from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.sync import pyvalerie
+			from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.plugin import getSyncInfoInstance
+			from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.sync import pyvalerie
 			syncInfo = getSyncInfoInstance()
 			syncInfo.registerOutputInstance(None, None) #session)
 			syncInfo.start(pyvalerie.NORMAL)
@@ -804,8 +804,8 @@ class SyncFunctions(Resource):
 		##########################
 		elif request.args["mode"][0] == "fastSync":
 			printl("mode (fastSync)", self, "I")
-			from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.plugin import getSyncInfoInstance
-			from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.sync import pyvalerie
+			from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.plugin import getSyncInfoInstance
+			from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.sync import pyvalerie
 			syncInfo = getSyncInfoInstance()
 			syncInfo.registerOutputInstance(None, None) #session)
 			syncInfo.start(pyvalerie.FAST)
@@ -818,7 +818,7 @@ class SyncFunctions(Resource):
 		##########################
 		elif request.args["mode"][0] == "cancelSync":
 			printl("mode (cancelSync)", self, "I")
-			from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.plugin import getSyncInfoInstance
+			from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.plugin import getSyncInfoInstance
 			syncInfo = getSyncInfoInstance()
 			syncInfo.registerOutputInstance(None, None) #session)
 			syncInfo.abort()
@@ -834,9 +834,9 @@ class SyncFunctions(Resource):
 			#printl("mode (getSyncLog)", self, "I")
 			global utf8ToLatin
 			if utf8ToLatin is None:
-				from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.Utf8 import utf8ToLatin
+				from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.Utf8 import utf8ToLatin
 			
-			from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.plugin import getSyncInfoInstance
+			from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.plugin import getSyncInfoInstance
 			syncInfo = getSyncInfoInstance()
 			log = syncInfo.log
 			if row < len(log):
@@ -850,7 +850,7 @@ class SyncFunctions(Resource):
 		##########################
 		elif request.args["mode"][0] == "getSyncPercentage":
 			printl("mode (getSyncPercentage)", self, "I")
-			from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.plugin import getSyncInfoInstance
+			from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.plugin import getSyncInfoInstance
 			syncInfo = getSyncInfoInstance()
 			if syncInfo.range > 0:
 				progress = int((syncInfo.progress/syncInfo.range)*100.0)
@@ -865,7 +865,7 @@ class SyncFunctions(Resource):
 		##########################
 		elif request.args["mode"][0] == "getRunningState":
 			printl("mode (getRunningState)", self, "I")
-			from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.plugin import getSyncInfoInstance
+			from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.plugin import getSyncInfoInstance
 			syncInfo = getSyncInfoInstance()
 			running = syncInfo.inProgress
 			
@@ -877,7 +877,7 @@ class SyncFunctions(Resource):
 		##########################
 		elif request.args["mode"][0] == "getFinishedState":
 			printl("mode (getFinishedState)", self, "I")
-			from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.plugin import getSyncInfoInstance
+			from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.plugin import getSyncInfoInstance
 			syncInfo = getSyncInfoInstance()
 			finished = syncInfo.isFinished
 			

@@ -32,8 +32,8 @@ from DMC_Global import getAPILevel, Update, loadFonts, PowerManagement
 from DMC_MovieLibrary import DMC_MovieLibrary
 from DMC_TvShowLibrary import DMC_TvShowLibrary
 
-from Plugins.Extensions.ProjectValerie.__plugin__ import getPlugin, getPlugins, Plugin, registerPlugin
-from Plugins.Extensions.ProjectValerie.__common__ import printl2 as printl, isInetAvailable
+from Plugins.Extensions.PVMC.__plugin__ import getPlugin, getPlugins, Plugin, registerPlugin
+from Plugins.Extensions.PVMC.__common__ import printl2 as printl, isInetAvailable
 
 #------------------------------------------------------------------------------------------
 
@@ -44,10 +44,10 @@ def localeInit():
 	os.environ["LANGUAGE"] = lang[:2]
 	gettext.bindtextdomain("enigma2", resolveFilename(SCOPE_LANGUAGE))
 	gettext.textdomain("enigma2")
-	gettext.bindtextdomain("ProjectValerie", "%s%s" % (resolveFilename(SCOPE_PLUGINS), "Extensions/ProjectValerie/locale/"))
+	gettext.bindtextdomain("PVMC", "%s%s" % (resolveFilename(SCOPE_PLUGINS), "Extensions/PVMC/locale/"))
 
 def _(txt):
-	t = gettext.dgettext("ProjectValerie", txt)
+	t = gettext.dgettext("PVMC", txt)
 	if t == txt:
 		t = gettext.gettext(txt)
 	return t
@@ -220,7 +220,7 @@ class PVMC_Update(Screen):
 	# RTV = 255 ERROR
 	def update(self):
 		printl("->", self, "S")
-		self["text"].setText(_("Updating ProjectValerie \n\n\nStay tuned :-)"))
+		self["text"].setText(_("Updating PVMC \n\n\nStay tuned :-)"))
 		remoteUrl = self.g_remoteUrl
 		cmd = """
 BIN=""
@@ -238,7 +238,7 @@ echo "Binary: $BIN"
 if [ $BIN != "" ]; then
  $BIN remove project-valerie
  echo "Cleaning up"
- rm -rf /usr/lib/enigma2/python/Plugins/Extensions/ProjectValerie/*
+ rm -rf /usr/lib/enigma2/python/Plugins/Extensions/PVMC/*
  if [ $BIN == "opkg" ]; then
    OPARAM="--force-overwrite"
  else

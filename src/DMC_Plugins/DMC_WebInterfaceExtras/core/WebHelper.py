@@ -5,7 +5,7 @@
 from Components.config import config
 from Components.config import ConfigSelection
 
-from Plugins.Extensions.ProjectValerie.__common__ import printl2 as printl
+from Plugins.Extensions.PVMC.__common__ import printl2 as printl
 
 import os
 #------------------------------------------------------------------------------------------
@@ -29,7 +29,7 @@ class WebHelper():
 	def getHtmlCore (self, webResource, functions = False, submenu = None ):
 		global utf8ToLatin
 		if utf8ToLatin is None:
-			from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.Utf8 import utf8ToLatin
+			from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.Utf8 import utf8ToLatin
 				
 		htmlCore = self.readFileContent(u"/DMC_Plugins/DMC_WebInterfaceExtras/content/index.html")
 		
@@ -72,7 +72,7 @@ class WebHelper():
 	def getHtmlForm (self, formName):
 		global utf8ToLatin
 		if utf8ToLatin is None:
-			from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.Utf8 import utf8ToLatin
+			from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.Utf8 import utf8ToLatin
 			
 		htmlForm = self.readFileContent(u"/DMC_Plugins/DMC_WebInterfaceExtras/content/forms/" + formName + ".tpl")
 	
@@ -86,9 +86,9 @@ class WebHelper():
 		global Utf8
 		global utf8ToLatin
 		if Utf8 is None:
-			from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.Utf8 import Utf8
+			from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.Utf8 import Utf8
 		if utf8ToLatin is None:
-			from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.Utf8 import utf8ToLatin	
+			from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.Utf8 import utf8ToLatin	
 
 		c = Utf8(config.plugins.pvmc.pluginfolderpath.value + target, "r")
 		content = c.read()

@@ -9,8 +9,8 @@ from Screens.Screen import Screen
 from DMC_View import DMC_View, getViews
 from DMC_Player import PVMC_Player
 
-from Plugins.Extensions.ProjectValerie.__common__ import printl2 as printl
-from Plugins.Extensions.ProjectValerie.__plugin__ import getPlugins, Plugin
+from Plugins.Extensions.PVMC.__common__ import printl2 as printl
+from Plugins.Extensions.PVMC.__plugin__ import getPlugins, Plugin
 
 #------------------------------------------------------------------------------------------
 

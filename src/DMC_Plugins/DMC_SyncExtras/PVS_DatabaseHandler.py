@@ -72,7 +72,7 @@ from datetime  import date
 from threading import Lock
 from MediaInfo import MediaInfo
 from Components.config import config
-from Plugins.Extensions.ProjectValerie.__common__ import printl2 as printl
+from Plugins.Extensions.PVMC.__common__ import printl2 as printl
 from Screens.MessageBox import MessageBox
 	
 DB_SQLITE_LOADED = False
@@ -80,7 +80,7 @@ DB_PICKLEV2_LOADED = False
 DATABASE_HANDLER_FOUND = False
 
 try:
-	from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.PVS_DatabaseHandlerSQL import databaseHandlerSQL
+	from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.PVS_DatabaseHandlerSQL import databaseHandlerSQL
 	from PVS_DatabaseHandlerSQL import databaseHandlerSQL
 	DB_SQLITE_LOADED = True
 	printl("PVS_DatabaseHandlerSQL Loaded    :) ", None, "H")	
@@ -89,7 +89,7 @@ except Exception, ex:
 	printl("PVS_DatabaseHandlerSQL not Loaded :(   "+ str(ex), None , "H")
 
 try:					   
-	from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.PVS_DatabaseHandlerPICKLEV2 import databaseHandlerPICKLEV2
+	from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.PVS_DatabaseHandlerPICKLEV2 import databaseHandlerPICKLEV2
 	from PVS_DatabaseHandlerPICKLEV2 import databaseHandlerPICKLEV2
 	DB_PICKLEV2_LOADED = True
 	printl("PVS_DatabaseHandlerPICKLE V2 Loaded :)", None, "H")
@@ -98,7 +98,7 @@ except Exception, ex:
 	printl("PVS_DatabaseHandlerPICKLE V2 not Loaded :(   "+ str(ex), None, "H")
 		
 try:					   
-	from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.PVS_DatabaseHandlerPICKLE import databaseHandlerPICKLE
+	from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.PVS_DatabaseHandlerPICKLE import databaseHandlerPICKLE
 	from PVS_DatabaseHandlerPICKLE import databaseHandlerPICKLE
 	printl("PVS_DatabaseHandlerPICKLE Loaded :)", None, "H")
 	DATABASE_HANDLER_FOUND = True
@@ -106,7 +106,7 @@ except Exception, ex:
 	printl("PVS_DatabaseHandlerPICKLE not Loaded :(   "+ str(ex), None, "H")
 	
 #try:
-#	from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.PVS_DatabaseHandlerTXD import databaseHandlerTXD
+#	from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.PVS_DatabaseHandlerTXD import databaseHandlerTXD
 #	from PVS_DatabaseHandlerTXD import databaseHandlerTXD
 #	printl("PVS_DatabaseHandlerTXD Loaded    :)", None, "H")
 #	DATABASE_HANDLER_FOUND = True

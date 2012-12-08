@@ -4,8 +4,8 @@ import os
 
 from DMC_Library import DMC_Library
 
-from Plugins.Extensions.ProjectValerie.__common__ import printl2 as printl
-from Plugins.Extensions.ProjectValerie.__plugin__ import Plugin, registerPlugin
+from Plugins.Extensions.PVMC.__common__ import printl2 as printl
+from Plugins.Extensions.PVMC.__plugin__ import Plugin, registerPlugin
 from Components.config import *
 #------------------------------------------------------------------------------------------
 
@@ -21,7 +21,7 @@ class DMC_TvShowLibrary(DMC_Library):
 	def __init__(self, session):
 		global Manager
 		if Manager is None:
-			from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.Manager import Manager
+			from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.Manager import Manager
 		
 		self.manager = Manager("TVShows")
 		DMC_Library.__init__(self, session, "tv shows")
@@ -33,7 +33,7 @@ class DMC_TvShowLibrary(DMC_Library):
 		global Manager
 		global utf8ToLatin
 		if utf8ToLatin is None:
-			from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.Utf8 import utf8ToLatin
+			from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.Utf8 import utf8ToLatin
 	
 		printl("DEBUG 3", self)
 	

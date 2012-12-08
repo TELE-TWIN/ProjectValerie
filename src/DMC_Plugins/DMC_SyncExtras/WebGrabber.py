@@ -24,7 +24,7 @@ from   Components.config import config
 from   HtmlEncoding import decode_htmlentities
 import Utf8
 
-from Plugins.Extensions.ProjectValerie.__common__ import printl2 as printl
+from Plugins.Extensions.PVMC.__common__ import printl2 as printl
 
 #------------------------------------------------------------------------------------------
 

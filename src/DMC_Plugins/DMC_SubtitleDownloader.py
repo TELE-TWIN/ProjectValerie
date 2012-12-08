@@ -9,8 +9,8 @@ from Components.config import ConfigSelection
 from Components.config import ConfigSubsection
 from Screens.ChoiceBox import ChoiceBox
 
-from Plugins.Extensions.ProjectValerie.__common__ import printl2 as printl
-from Plugins.Extensions.ProjectValerie.__plugin__ import Plugin, registerPlugin
+from Plugins.Extensions.PVMC.__common__ import printl2 as printl
+from Plugins.Extensions.PVMC.__plugin__ import Plugin, registerPlugin
 
 have_unzip = False
 try:
@@ -28,10 +28,10 @@ def localeInit():
 	os.environ["LANGUAGE"] = lang[:2]
 	gettext.bindtextdomain("enigma2", resolveFilename(SCOPE_LANGUAGE))
 	gettext.textdomain("enigma2")
-	gettext.bindtextdomain("ProjectValerie", "%s%s" % (resolveFilename(SCOPE_PLUGINS), "Extensions/ProjectValerie/locale/"))
+	gettext.bindtextdomain("PVMC", "%s%s" % (resolveFilename(SCOPE_PLUGINS), "Extensions/PVMC/locale/"))
 
 def _(txt):
-	t = gettext.dgettext("ProjectValerie", txt)
+	t = gettext.dgettext("PVMC", txt)
 	if t == txt:
 		t = gettext.gettext(txt)
 	return t
@@ -90,9 +90,9 @@ class DMC_SubtitleDownloader(ChoiceBox):
 		global Manager
 		global utf8ToLatin
 		if Manager is None:
-			from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.Manager import Manager
+			from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.Manager import Manager
 		if utf8ToLatin is None:
-			from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.Utf8 import utf8ToLatin
+			from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.Utf8 import utf8ToLatin
 		self.session = session
 		self.service = config.plugins.pvmc.plugins.subdown.provider.value
 		self.language_1 = config.plugins.pvmc.plugins.subdown.language1.value

@@ -19,32 +19,33 @@ import Plugins.Plugin
 from Tools.Directories import resolveFilename, SCOPE_PLUGINS, SCOPE_SKIN, SCOPE_CURRENT_SKIN
 
 #Cannot import log here cause config.pvmc not ready
-from Plugins.Extensions.ProjectValerie.__plugin__ import loadPlugins
-from Plugins.Extensions.ProjectValerie.DMC_Global import findSkin
+from Plugins.Extensions.PVMC.__plugin__ import loadPlugins
+from Plugins.Extensions.PVMC.DMC_Global import findSkin
 
 #-----------------------------------------------------------------------------------------
 
-print "[PVMC STARTING] I  __init__:: Init Valerie"
+print "[PVMC STARTING] I  __init__:: Init PVMC"
 
 # the currentVersion should be renewed every major update
 currentVersion          = "r001"
 defaultPluginFolderPath = resolveFilename(SCOPE_PLUGINS, "Extensions/PVMC/")
 defaultSkinFolderPath   = defaultPluginFolderPath + "skins/"
-defaultConfigFolderPath = "/hdd/valerie/"
+defaultConfigFolderPath = "/hdd/pvmc/"
+defaultLogFolderPath    = "/tmp/"
 defaultMediaFolderPath  = defaultConfigFolderPath + "media/"
-defaultTmpFolderPath    = "/tmp/valerie/"
+defaultTmpFolderPath    = "/tmp/pvmc/"
 defaultSkin             = "blackDon"
 defaultURL              = "http://val.duckbox.info/"
 defaultUpdateXML        = "update.php"
 
 config.plugins.pvmc = ConfigSubsection()
-
+config.plugins.pvmc.logfolderpath     = ConfigText(default = defaultLogFolderPath, visible_width = 50, fixed_size = False)
 config.plugins.pvmc.language          = ConfigSelection(default="EN", choices = [("EN", _("English"))])
 config.plugins.pvmc.showwizard        = ConfigYesNo(default = True)
 config.plugins.pvmc.autostart         = ConfigYesNo(default = True)
 config.plugins.pvmc.checkforupdate    = ConfigSelection(default = "Passive", choices = ["Active", "Passive", "Off", ])
 config.plugins.pvmc.updatetype        = ConfigSelection(default = "Release", choices = ["Release", "Nightly", ])
-config.plugins.pvmc.debugMode         = ConfigSelection(default="Silent", choices = ["High", "Normal", "Silent", ])
+config.plugins.pvmc.debugMode         = ConfigSelection(default="0", choices = [("0", _("Silent")),("1", _("Normal")),("2", _("High")),("3", _("All"))])
 
 config.plugins.pvmc.showmovieandtvinmainmenu    = ConfigYesNo(default = False)
 config.plugins.pvmc.onpowerpress      = ConfigSelection(default="DeepStandby", choices = ["DeepStandby", "Standby", ])
@@ -64,7 +65,7 @@ config.plugins.pvmc.showseenforseason   = ConfigYesNo(default = False)
 
 config.plugins.pvmc.save()
 
-from Plugins.Extensions.ProjectValerie.__common__ import printl2 as printl
+from Plugins.Extensions.PVMC.__common__ import printl2 as printl
 printl("__init__:: version="        + str(config.plugins.pvmc.version.value))
 printl("__init__:: language="       + str(config.plugins.pvmc.language.value))
 printl("__init__:: showwizard="     + str(config.plugins.pvmc.showwizard.value))
@@ -148,8 +149,8 @@ if skinLoaded == False:
 		config.plugins.pvmc.skin.value           = defaultSkin
 
 #We also have to search for Plugins in the main folder as there are main components located (settings general and expert)
-loadPlugins(config.plugins.pvmc.pluginfolderpath.value, "Plugins.Extensions.ProjectValerie.")
-loadPlugins(config.plugins.pvmc.pluginfolderpath.value + "/DMC_Plugins", "Plugins.Extensions.ProjectValerie.DMC_Plugins.")
+loadPlugins(config.plugins.pvmc.pluginfolderpath.value, "Plugins.Extensions.PVMC.")
+loadPlugins(config.plugins.pvmc.pluginfolderpath.value + "/DMC_Plugins", "Plugins.Extensions.PVMC.DMC_Plugins.")
 
 config.plugins.pvmc.save()
 # Will crash with enigma2 3.2.1 !!!!!!!!!!!!

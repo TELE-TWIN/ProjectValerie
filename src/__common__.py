@@ -73,7 +73,7 @@ def printl2 (string, parent=None, dmode= "U"):
 	@return: none
 	'''
 
-	debugMode = int(config.plugins.PVMC.debugMode.value)
+	debugMode = int(config.plugins.pvmc.debugMode.value)
 	
 	
 	#TODO change before making new version
@@ -187,12 +187,12 @@ def openLogFile():
 	'''
 	#printl2("", "openLogFile", "S")
 	
-	logDir = config.plugins.dreamplex.logfolderpath.value
+	logDir = config.plugins.pvmc.logfolderpath.value
 	
 	now = datetime.datetime.now()
 	try:
 		instance = Singleton()
-		instance.getLogFileInstance(open(logDir + "dreamplex.log", "w"))
+		instance.getLogFileInstance(open(logDir + "pvmc.log", "w"))
 		
 	except Exception, ex:
 		printl2("Exception(" + str(type(ex)) + "): " + str(ex), "openLogFile", "E")

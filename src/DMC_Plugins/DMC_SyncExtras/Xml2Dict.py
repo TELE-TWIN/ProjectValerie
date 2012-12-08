@@ -6,7 +6,7 @@ import os
 import xml.dom.minidom as minidom
 from xml.dom.minicompat import NodeList as NodeList
 
-from Plugins.Extensions.ProjectValerie.__common__ import printl2cond as printlc
+from Plugins.Extensions.PVMC.__common__ import printl2cond as printlc
 
 #------------------------------------------------------------------------------------------
 

@@ -4,8 +4,8 @@ import os
 
 from DMC_Library import DMC_Library
 
-from Plugins.Extensions.ProjectValerie.__common__ import printl2 as printl
-from Plugins.Extensions.ProjectValerie.__plugin__ import Plugin, registerPlugin
+from Plugins.Extensions.PVMC.__common__ import printl2 as printl
+from Plugins.Extensions.PVMC.__plugin__ import Plugin, registerPlugin
 from Components.config import config
 
 #------------------------------------------------------------------------------------------
@@ -23,7 +23,7 @@ class DMC_MovieLibrary(DMC_Library):
 		printl ("->", self)
 		global Manager
 		if Manager is None:
-			from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.Manager import Manager
+			from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.Manager import Manager
 		printl ("Manager Imported")
 		
 		self.manager = Manager("Movies")
@@ -36,7 +36,7 @@ class DMC_MovieLibrary(DMC_Library):
 		global Manager
 		global utf8ToLatin
 		if utf8ToLatin is None:
-			from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.Utf8 import utf8ToLatin
+			from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.Utf8 import utf8ToLatin
 		
 		userId = config.plugins.pvmc.seenuserid.value
 		# Diplay all Movies

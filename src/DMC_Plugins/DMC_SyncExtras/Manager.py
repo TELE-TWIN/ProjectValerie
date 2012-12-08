@@ -60,8 +60,8 @@ from MobileImdbComProvider import MobileImdbComProvider
 from sync import Sync
 from Arts import Arts
 import Utf8
-from Plugins.Extensions.ProjectValerie.__common__ import printl2 as printl
-from Plugins.Extensions.ProjectValerie.__plugin__ import getPlugins, Plugin
+from Plugins.Extensions.PVMC.__common__ import printl2 as printl
+from Plugins.Extensions.PVMC.__plugin__ import getPlugins, Plugin
 
 class Manager():
 	# make ID's equal in MediaInfo & Manager, hope there is nothing hardcoded...
@@ -86,7 +86,7 @@ class Manager():
 			replace.load()
 		#except Exception, ex:
 		#	printl ("Exception on Init Ex:"+str(ex), self)
-		#	from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.sync import checkDefaults
+		#	from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.sync import checkDefaults
 		#	checkDefaults()			
 		#	self.db = Database().getInstance("Manager (by exception)-"+origin, session)
 		#	replace.load()

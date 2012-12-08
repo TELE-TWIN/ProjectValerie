@@ -5,7 +5,7 @@ import WebGrabber
 from threading import Lock
 from Components.config import config
 from Xml2Dict import Xml2Dict
-from Plugins.Extensions.ProjectValerie.__common__ import printl2 as printl
+from Plugins.Extensions.PVMC.__common__ import printl2 as printl
 #------------------------------------------------------------------------------------------
 
 gInstance = None

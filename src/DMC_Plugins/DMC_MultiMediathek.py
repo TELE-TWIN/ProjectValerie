@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from Components.config import *
-from Plugins.Extensions.ProjectValerie.__common__ import printl2 as printl
-from Plugins.Extensions.ProjectValerie.__plugin__ import Plugin, registerPlugin
+from Plugins.Extensions.PVMC.__common__ import printl2 as printl
+from Plugins.Extensions.PVMC.__plugin__ import Plugin, registerPlugin
 
 config.plugins.pvmc.plugins.multimediathek = ConfigSubsection()
 config.plugins.pvmc.plugins.multimediathek.show = ConfigYesNo(default = True)

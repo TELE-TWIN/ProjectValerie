@@ -3,8 +3,8 @@
 from Components.config import config
 from Plugins.Plugin import PluginDescriptor
 
-from Plugins.Extensions.ProjectValerie.__common__ import printl2 as printl
-from Plugins.Extensions.ProjectValerie.__plugin__ import getPlugins, Plugin
+from Plugins.Extensions.PVMC.__common__ import printl2 as printl
+from Plugins.Extensions.PVMC.__plugin__ import getPlugins, Plugin
 
 #------------------------------------------------------------------------------------------
 
@@ -35,7 +35,7 @@ def autostart(reason, **kwargs):
 
 def getNextWakeup():
 	printl("->", __name__, "I")
-	from Plugins.Extensions.ProjectValerie.__plugin__ import getPlugin, getPlugins, Plugin
+	from Plugins.Extensions.PVMC.__plugin__ import getPlugin, getPlugins, Plugin
 	
 	nexWakeup = -1
 	plugins = getPlugins(Plugin.WAKEUP)

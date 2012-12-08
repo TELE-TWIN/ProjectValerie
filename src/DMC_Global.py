@@ -9,7 +9,7 @@ from twisted.web.microdom import parseString
 from Components.config import config
 from DataElement import DataElement
 
-from Plugins.Extensions.ProjectValerie.__common__ import printl2 as printl, isInetAvailable, getBoxtype
+from Plugins.Extensions.PVMC.__common__ import printl2 as printl, isInetAvailable, getBoxtype
 #------------------------------------------------------------------------------------------
 
 def getAPILevel(parent):
@@ -52,7 +52,7 @@ def loadFonts():
 			registerFont(file, name, scale, replacement)
 	
 	else:
-		registerFont("/usr/lib/enigma2/python/Plugins/Extensions/ProjectValerie/skins/mayatypeuitvg.ttf", "Modern", 100, False)
+		registerFont("/usr/lib/enigma2/python/Plugins/Extensions/PVMC/skins/mayatypeuitvg.ttf", "Modern", 100, False)
 
 #------------------------------------------------------------------------------------------
 
@@ -247,7 +247,7 @@ class Update(object):
 				opener.addheaders = [('User-agent', 'urllib2_val_' + boxType[1] + '_' + boxType[2] + '_' + boxType[3] + '_' + installedRevision)]
 				f = opener.open(self.url)
 				html = f.read()
-				from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.Xml2Dict import Xml2Dict
+				from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.Xml2Dict import Xml2Dict
 				updateXml = Xml2Dict("")
 				updateXml.parse(html)
 				self.updateXmlDict = updateXml.get()

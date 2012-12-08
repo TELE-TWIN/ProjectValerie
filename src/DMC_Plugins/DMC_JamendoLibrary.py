@@ -6,10 +6,10 @@ from Components.config import *
 from Components.config import ConfigSubsection
 from Components.config import ConfigYesNo
 
-from Plugins.Extensions.ProjectValerie.DMC_Library import DMC_Library
+from Plugins.Extensions.PVMC.DMC_Library import DMC_Library
 
-from Plugins.Extensions.ProjectValerie.__common__ import printl2 as printl
-from Plugins.Extensions.ProjectValerie.__plugin__ import Plugin, registerPlugin
+from Plugins.Extensions.PVMC.__common__ import printl2 as printl
+from Plugins.Extensions.PVMC.__plugin__ import Plugin, registerPlugin
 
 #------------------------------------------------------------------------------------------
 
@@ -40,9 +40,9 @@ class DMC_JamendoLibrary(DMC_Library):
     def loadLibrary(self, params, seenPng=None, unseenPng=None):
         global utf8ToLatin
         if utf8ToLatin is None:
-            from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.Utf8 import utf8ToLatin
-        from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.WebGrabber import getFile
-        from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.Xml2Dict import Xml2Dict
+            from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.Utf8 import utf8ToLatin
+        from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.WebGrabber import getFile
+        from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.Xml2Dict import Xml2Dict
         
         if params is None:
             parsedLibrary = []
@@ -158,9 +158,9 @@ class DMC_JamendoLibrary(DMC_Library):
     def getPlaybackList(self, entry):
         global utf8ToLatin
         if utf8ToLatin is None:
-            from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.Utf8 import utf8ToLatin
-        from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.WebGrabber import getFile
-        from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.Xml2Dict import Xml2Dict
+            from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.Utf8 import utf8ToLatin
+        from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.WebGrabber import getFile
+        from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.Xml2Dict import Xml2Dict
         
         playbackList = []
         if entry.has_key("JamendoId"):

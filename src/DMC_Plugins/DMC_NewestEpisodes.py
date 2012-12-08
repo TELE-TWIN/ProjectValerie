@@ -2,9 +2,9 @@
 
 import os
 
-from Plugins.Extensions.ProjectValerie.DMC_Library import DMC_Library
-from Plugins.Extensions.ProjectValerie.__common__ import printl2 as printl
-from Plugins.Extensions.ProjectValerie.__plugin__ import Plugin, registerPlugin
+from Plugins.Extensions.PVMC.DMC_Library import DMC_Library
+from Plugins.Extensions.PVMC.__common__ import printl2 as printl
+from Plugins.Extensions.PVMC.__plugin__ import Plugin, registerPlugin
 from datetime import date
 import time
 from Components.config import config
@@ -22,10 +22,10 @@ def localeInit():
 	os.environ["LANGUAGE"] = lang[:2]
 	gettext.bindtextdomain("enigma2", resolveFilename(SCOPE_LANGUAGE))
 	gettext.textdomain("enigma2")
-	gettext.bindtextdomain("ProjectValerie", "%s%s" % (resolveFilename(SCOPE_PLUGINS), "Extensions/ProjectValerie/locale/"))
+	gettext.bindtextdomain("PVMC", "%s%s" % (resolveFilename(SCOPE_PLUGINS), "Extensions/PVMC/locale/"))
 
 def _(txt):
-	t = gettext.dgettext("ProjectValerie", txt)
+	t = gettext.dgettext("PVMC", txt)
 	if t == txt:
 		t = gettext.gettext(txt)
 	return t
@@ -51,7 +51,7 @@ class DMC_NewestEpisodes(DMC_Library):
 	def __init__(self, session):
 		global Manager
 		if Manager is None:
-			from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.Manager import Manager
+			from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.Manager import Manager
 		
 		self.manager = Manager("NewestEpisodes")
 		DMC_Library.__init__(self, session, "tv shows - newest")
@@ -64,7 +64,7 @@ class DMC_NewestEpisodes(DMC_Library):
 		global Manager
 		global utf8ToLatin
 		if utf8ToLatin is None:
-			from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.Utf8 import utf8ToLatin
+			from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.Utf8 import utf8ToLatin
 		
 		start_time = time.time()
 		userId = config.plugins.pvmc.seenuserid.value

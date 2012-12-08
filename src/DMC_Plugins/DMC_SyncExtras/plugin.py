@@ -42,16 +42,16 @@ import WebGrabber
 
 
 # Hack as long as these plugins are seperated
-from Plugins.Extensions.ProjectValerie.__common__ import printl2 as printl
-from Plugins.Extensions.ProjectValerie.DataElement import DataElement
-from Plugins.Extensions.ProjectValerie.DMC_Global import getAPILevel
+from Plugins.Extensions.PVMC.__common__ import printl2 as printl
+from Plugins.Extensions.PVMC.DataElement import DataElement
+from Plugins.Extensions.PVMC.DMC_Global import getAPILevel
 
 #------------------------------------------------------------------------------------------
 
 #dSize = getDesktop(0).size()
-#font = "/usr/lib/enigma2/python/Plugins/Extensions/ProjectValerie/skins/blackSwan/mayatypeuitvg_16.9.ttf"
+#font = "/usr/lib/enigma2/python/Plugins/Extensions/PVMC/skins/blackSwan/mayatypeuitvg_16.9.ttf"
 #if dSize.width() == 720 and dSize.height() == 576:
-	#font = "/usr/lib/enigma2/python/Plugins/Extensions/ProjectValerie/skins/blackSwan/mayatypeuitvg_4.3.ttf"
+	#font = "/usr/lib/enigma2/python/Plugins/Extensions/PVMC/skins/blackSwan/mayatypeuitvg_4.3.ttf"
 #printl("Loading Font: " + font)
 #try:
 	#addFont(font, "Modern", 100, False)
@@ -64,10 +64,10 @@ def localeInit():
 	os.environ["LANGUAGE"] = lang[:2]
 	gettext.bindtextdomain("enigma2", resolveFilename(SCOPE_LANGUAGE))
 	gettext.textdomain("enigma2")
-	gettext.bindtextdomain("ProjectValerie", "%s%s" % (resolveFilename(SCOPE_PLUGINS), "Extensions/ProjectValerie/locale/"))
+	gettext.bindtextdomain("PVMC", "%s%s" % (resolveFilename(SCOPE_PLUGINS), "Extensions/PVMC/locale/"))
 
 def _(txt):
-	t = gettext.dgettext("ProjectValerie", txt)
+	t = gettext.dgettext("PVMC", txt)
 	if t == txt:
 		t = gettext.gettext(txt)
 	return t
@@ -79,7 +79,7 @@ language.addCallback(localeInit)
 
 #------------------------------------------------------------------------------------------
 
-class ProjectValerieSyncSettingsConfPathsAdd(Screen):
+class PVMCSyncSettingsConfPathsAdd(Screen):
 	skinDeprecated = """
 		<screen position="center,center" size="560,400" title="Add Path" >
 			<ePixmap pixmap="skin_default/buttons/red.png" position="0,0" size="140,40" alphatest="on" />
@@ -105,7 +105,7 @@ class ProjectValerieSyncSettingsConfPathsAdd(Screen):
 			
 		if self.APILevel >= 2:
 			try:
-				from Plugins.Extensions.ProjectValerie.StillPicture import StillPicture
+				from Plugins.Extensions.PVMC.StillPicture import StillPicture
 				self["showiframe"] = StillPicture(session)
 				self.ShowStillPicture = True
 			except Exception, ex:
@@ -121,7 +121,7 @@ class ProjectValerieSyncSettingsConfPathsAdd(Screen):
 		self["folderList"] = self.folderList
 		self["folderList"].onSelectionChanged.append(self.selectionChanged)
 
-		self["ProjectValerieSyncSettingsConfPathsAddActionMap"] = ActionMap(["OkCancelActions", "ColorActions", "DirectionActions"],
+		self["PVMCSyncSettingsConfPathsAddActionMap"] = ActionMap(["OkCancelActions", "ColorActions", "DirectionActions"],
 		{
 			"green": self.add,
 			"red": self.exit,
@@ -160,7 +160,7 @@ class ProjectValerieSyncSettingsConfPathsAdd(Screen):
 		printl("", self)
 		self.close(None)
 
-class ProjectValerieSyncSettingsConfPaths(Screen):
+class PVMCSyncSettingsConfPaths(Screen):
 	skinDeprecated = """
 		<screen position="center,center" size="560,400" title="Settings - Paths" >
 			<ePixmap pixmap="skin_default/buttons/red.png" position="0,0" size="140,40" alphatest="on" />
@@ -193,7 +193,7 @@ class ProjectValerieSyncSettingsConfPaths(Screen):
 			
 		if self.APILevel >= 2:
 			try:
-				from Plugins.Extensions.ProjectValerie.StillPicture import StillPicture
+				from Plugins.Extensions.PVMC.StillPicture import StillPicture
 				self["showiframe"] = StillPicture(session)
 				self.ShowStillPicture = True
 			except Exception, ex:
@@ -243,7 +243,7 @@ class ProjectValerieSyncSettingsConfPaths(Screen):
 		
 		self["pathsList"] = MenuList(self.pathsList)
 		
-		self["ProjectValerieSyncSettingsConfPathsActionMap"] = ActionMap(["OkCancelActions", "ColorActions", "DirectionActions"],
+		self["PVMCSyncSettingsConfPathsActionMap"] = ActionMap(["OkCancelActions", "ColorActions", "DirectionActions"],
 		{
 			"cancel": self.exit,
 			"red": self.key_red,
@@ -285,7 +285,7 @@ class ProjectValerieSyncSettingsConfPaths(Screen):
 
 	def add(self):
 		printl("", self)
-		self.session.openWithCallback(self.addPathToList, ProjectValerieSyncSettingsConfPathsAdd)
+		self.session.openWithCallback(self.addPathToList, PVMCSyncSettingsConfPathsAdd)
 
 	def addPathToList(self, path):
 		printl("", self)
@@ -357,7 +357,7 @@ class ProjectValerieSyncSettingsConfPaths(Screen):
 		printl("", self)
 		self.close()
 
-class ProjectValerieSyncSettingsConfSettings(Screen, ConfigListScreen):
+class PVMCSyncSettingsConfSettings(Screen, ConfigListScreen):
 	skinDeprecated = """
 		<screen position="center,center" size="560,400" title="Settings" >
 			<ePixmap pixmap="skin_default/buttons/red.png" position="0,0" size="140,40" alphatest="on" />
@@ -386,7 +386,7 @@ class ProjectValerieSyncSettingsConfSettings(Screen, ConfigListScreen):
 
 		if self.APILevel >= 2:
 			try:
-				from Plugins.Extensions.ProjectValerie.StillPicture import StillPicture
+				from Plugins.Extensions.PVMC.StillPicture import StillPicture
 				self["showiframe"] = StillPicture(session)
 				self.ShowStillPicture = True
 			except Exception, ex:
@@ -450,7 +450,7 @@ class ProjectValerieSyncSettingsConfSettings(Screen, ConfigListScreen):
 	def cancel(self):
 		self.close()
 
-class ProjectValerieSyncSettings(Screen):
+class PVMCSyncSettings(Screen):
 	skinDeprecated = """
 		<screen position="center,center" size="560,400" title="Settings" >
 			<ePixmap pixmap="skin_default/buttons/red.png" position="0,0" size="140,40" alphatest="on" />
@@ -474,7 +474,7 @@ class ProjectValerieSyncSettings(Screen):
 
 		if self.APILevel >= 2:
 			try:
-				from Plugins.Extensions.ProjectValerie.StillPicture import StillPicture
+				from Plugins.Extensions.PVMC.StillPicture import StillPicture
 				self["showiframe"] = StillPicture(session)
 				self.ShowStillPicture = True
 			except Exception, ex:
@@ -494,7 +494,7 @@ class ProjectValerieSyncSettings(Screen):
 		list.append((_("Reset filter"), "resetFl"))
 		
 		self["settingsMenu"] = MenuList(list)
-		self["ProjectValerieSyncSettingsActionMap"] = ActionMap(["SetupActions", "ColorActions"],
+		self["PVMCSyncSettingsActionMap"] = ActionMap(["SetupActions", "ColorActions"],
 		{
 			"cancel": self.cancel,
 			"ok": self.ok,
@@ -533,9 +533,9 @@ class ProjectValerieSyncSettings(Screen):
 		printl("returnValue: " + str(returnValue), self)
 		if returnValue is not None:
 			if returnValue == "confPaths":
-				self.session.open(ProjectValerieSyncSettingsConfPaths)
+				self.session.open(PVMCSyncSettingsConfPaths)
 			elif returnValue == "confSettings":
-				self.session.open(ProjectValerieSyncSettingsConfSettings, self)
+				self.session.open(PVMCSyncSettingsConfSettings, self)
 			elif returnValue == "clearCache":
 				try:
 					self.removeDir(config.plugins.pvmc.tmpfolderpath.value + "cache")
@@ -614,7 +614,7 @@ gSyncInfo = None
 def getSyncInfoInstance():
 	global gSyncInfo
 	if gSyncInfo is None:
-		gSyncInfo = ProjectValerieSyncInfo()
+		gSyncInfo = PVMCSyncInfo()
 	return gSyncInfo
 
 def autostart(session):
@@ -632,7 +632,7 @@ def unregisterOutputInstance(instance):
 	printl("unregisterOutputInstance::type(syncInfo): " + str(type(syncInfo)))
 	syncInfo.unregisterOutputInstance(instance)
 
-class ProjectValerieSyncInfo():
+class PVMCSyncInfo():
 	outputInstance = []
 	
 	progress = 0
@@ -760,7 +760,7 @@ class ProjectValerieSyncInfo():
 			for outputInstance in self.outputInstance:
 				outputInstance.notifyStatus()
 			if len(self.outputInstance) == 0:
-				self.session.open(ProjectValerieSyncFinished)
+				self.session.open(PVMCSyncFinished)
 		except Exception, ex:
 			printl("Exception: " + str(ex), self)
 
@@ -778,7 +778,7 @@ class ProjectValerieSyncInfo():
 			printl("Exception: " + str(ex), self)
 
 
-class ProjectValerieSyncFinished(Screen):
+class PVMCSyncFinished(Screen):
 	skin = """
 		<screen position="center,center" size="300,100" title=" ">
 			<widget name="info" position="10,10" size="280,80" font="Regular;30" halign="center" valign="center"/>
@@ -790,7 +790,7 @@ class ProjectValerieSyncFinished(Screen):
 		
 		self["info"] = Label(_("Synchronize finished"))
 		
-		self["ProjectValerieSyncFinishedActionMap"] = ActionMap(["OkCancelActions", "DirectionActions"],
+		self["PVMCSyncFinishedActionMap"] = ActionMap(["OkCancelActions", "DirectionActions"],
 		{
 			"ok": self.close,
 			"cancel": self.close
@@ -850,9 +850,9 @@ class ProjectValerieSyncFinished(Screen):
 		print "Timeout!"
 		self.close()
 
-class ProjectValerieSyncManagerInfo(Screen):
+class PVMCSyncManagerInfo(Screen):
 	skinDeprecated = """
-		<screen position="center,center" size="620,476" title="ProjectValerieSyncManager" >
+		<screen position="center,center" size="620,476" title="PVMCSyncManager" >
 			<ePixmap pixmap="skin_default/buttons/red.png" position="0,0" size="140,40" alphatest="on" />
 			<ePixmap pixmap="skin_default/buttons/green.png" position="140,0" size="140,40" alphatest="on" />
 			<ePixmap pixmap="skin_default/buttons/yellow.png" position="280,0" size="140,40" alphatest="on" />
@@ -898,7 +898,7 @@ class ProjectValerieSyncManagerInfo(Screen):
 			
 		if self.APILevel >= 2:
 			try:
-				from Plugins.Extensions.ProjectValerie.StillPicture import StillPicture
+				from Plugins.Extensions.PVMC.StillPicture import StillPicture
 				self["showiframe"] = StillPicture(session)
 				self.ShowStillPicture = True
 			except Exception, ex:
@@ -1091,9 +1091,9 @@ class ProjectValerieSyncManagerInfo(Screen):
 		else:
 			Screen.close(self, None)
 
-class ProjectValerieSyncManager(Screen):
+class PVMCSyncManager(Screen):
 	skinDeprecated = """
-		<screen position="center,center" size="620,476" title="ProjectValerieSyncManager" >
+		<screen position="center,center" size="620,476" title="PVMCSyncManager" >
 			<ePixmap pixmap="skin_default/buttons/red.png" position="0,0" size="140,40" alphatest="on" />
 			<ePixmap pixmap="skin_default/buttons/green.png" position="140,0" size="140,40" alphatest="on" />
 			<ePixmap pixmap="skin_default/buttons/yellow.png" position="280,0" size="140,40" alphatest="on" />
@@ -1132,7 +1132,7 @@ class ProjectValerieSyncManager(Screen):
 			
 		if self.APILevel >= 2:
 			try:
-				from Plugins.Extensions.ProjectValerie.StillPicture import StillPicture
+				from Plugins.Extensions.PVMC.StillPicture import StillPicture
 				self["showiframe"] = StillPicture(session)
 				self.ShowStillPicture = True
 			except Exception, ex:
@@ -1249,7 +1249,7 @@ class ProjectValerieSyncManager(Screen):
 			selection = self["listview"].getCurrent()
 			if selection is not None:
 				self.oldElement = selection[2]
-				self.session.openWithCallback(self.elementChanged, ProjectValerieSyncManagerInfo, self.manager, self.oldElement)
+				self.session.openWithCallback(self.elementChanged, PVMCSyncManagerInfo, self.manager, self.oldElement)
 
 	def elementChanged(self, newElement):
 		printl("newElement: " + repr(newElement), self)
@@ -1278,9 +1278,9 @@ class ProjectValerieSyncManager(Screen):
 				index = self["listview"].count() - 1
 			self["listview"].setIndex(index)
 
-class ProjectValerieSync(Screen):
+class PVMCSync(Screen):
 	skinDeprecated = """
-		<screen position="center,center" size="620,476" title="ProjectValerieSync" >
+		<screen position="center,center" size="620,476" title="PVMCSync" >
 			<ePixmap pixmap="skin_default/buttons/red.png" position="0,0" size="140,40" alphatest="on" />
 			<ePixmap pixmap="skin_default/buttons/green.png" position="140,0" size="140,40" alphatest="on" />
 			<ePixmap pixmap="skin_default/buttons/yellow.png" position="280,0" size="140,40" alphatest="on" />
@@ -1326,7 +1326,7 @@ class ProjectValerieSync(Screen):
 			
 		if self.APILevel >= 2:
 			try:
-				from Plugins.Extensions.ProjectValerie.StillPicture import StillPicture
+				from Plugins.Extensions.PVMC.StillPicture import StillPicture
 				self["showiframe"] = StillPicture(session)
 				self.ShowStillPicture = True
 			except Exception, ex:
@@ -1363,7 +1363,7 @@ class ProjectValerieSync(Screen):
 		}, -1)
 		
 		printl("PYTHONPATH=" + str(sys.path), self)
-		sys.path.append(resolveFilename(SCOPE_PLUGINS, "Extensions/ProjectValerieSync") )
+		sys.path.append(resolveFilename(SCOPE_PLUGINS, "Extensions/PVMCSync") )
 		
 		self.onLayoutFinish.append(self.setCustomTitle)
 		self.onFirstExecBegin.append(self.startup)
@@ -1425,7 +1425,7 @@ class ProjectValerieSync(Screen):
 	def menu(self):
 		syncInfo = getSyncInfoInstance()
 		if syncInfo.inProgress is False:
-			self.session.open(ProjectValerieSyncSettings)
+			self.session.open(PVMCSyncSettings)
 
 	def update(self):
 		syncInfo = getSyncInfoInstance()
@@ -1437,7 +1437,7 @@ class ProjectValerieSync(Screen):
 	def manage(self):
 		syncInfo = getSyncInfoInstance()
 		if syncInfo.inProgress is False:
-			self.session.open(ProjectValerieSyncManager)
+			self.session.open(PVMCSyncManager)
 		else:
 			self.close()
 

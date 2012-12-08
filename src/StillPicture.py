@@ -6,7 +6,7 @@ from Components.ServiceEventTracker import ServiceEventTracker, InfoBarBase
 
 from DMC_Global import Showiframe, Update
 
-from Plugins.Extensions.ProjectValerie.__common__ import printl2 as printl, getBoxtype
+from Plugins.Extensions.PVMC.__common__ import printl2 as printl, getBoxtype
 
 #------------------------------------------------------------------------------------------
 

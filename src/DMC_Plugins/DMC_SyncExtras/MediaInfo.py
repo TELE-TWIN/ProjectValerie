@@ -21,7 +21,7 @@ import re
 import replace
 import Utf8
 
-from Plugins.Extensions.ProjectValerie.__common__ import printl2 as printl, resub
+from Plugins.Extensions.PVMC.__common__ import printl2 as printl, resub
 #------------------------------------------------------------------------------------------
 
 ## WORKAROUND

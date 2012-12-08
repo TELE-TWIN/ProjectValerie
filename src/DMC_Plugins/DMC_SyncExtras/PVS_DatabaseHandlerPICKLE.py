@@ -114,7 +114,7 @@ from Components.config import config
 from MediaInfo         import MediaInfo
 from Screens.MessageBox import MessageBox
 
-from Plugins.Extensions.ProjectValerie.__common__ import printl2 as printl
+from Plugins.Extensions.PVMC.__common__ import printl2 as printl
 from threading import Lock
 
 gDatabaseHandler = None
@@ -1608,10 +1608,10 @@ class databaseHandlerPICKLE(object):
 		#this part can be removed after a while when there is nobody anymore that uses revision under 969
 		if version >= 968: 
 			printl("altering " + database + " to new style", self, "H")
-			self._modifyPickleDB(database, "Plugins.Extensions.ProjectValerieSync", "Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras")
+			self._modifyPickleDB(database, "Plugins.Extensions.PVMCSync", "Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras")
 		else:
 			printl("altering " + database + " to old style", self, "H")
-			self._modifyPickleDB(database, "Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras", "Plugins.Extensions.ProjectValerieSync")
+			self._modifyPickleDB(database, "Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras", "Plugins.Extensions.PVMCSync")
 		#part over		
 	
 	def _modifyPickleDB(self, database, oldValue, newValue):

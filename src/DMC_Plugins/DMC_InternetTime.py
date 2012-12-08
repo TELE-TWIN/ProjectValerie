@@ -9,8 +9,8 @@ from Components.config import ConfigYesNo
 from Components.config import ConfigSubsection
 
 
-from Plugins.Extensions.ProjectValerie.__common__ import printl2 as printl, isInetAvailable
-from Plugins.Extensions.ProjectValerie.__plugin__ import Plugin, registerPlugin
+from Plugins.Extensions.PVMC.__common__ import printl2 as printl, isInetAvailable
+from Plugins.Extensions.PVMC.__plugin__ import Plugin, registerPlugin
 
 #------------------------------------------------------------------------------------------
 
@@ -29,7 +29,7 @@ def getUTC():
 		return None
 	
 	try:
-		from Plugins.Extensions.ProjectValerie.DMC_Plugins.DMC_SyncExtras.WebGrabber import getText
+		from Plugins.Extensions.PVMC.DMC_Plugins.DMC_SyncExtras.WebGrabber import getText
 		page = getText("http://www.time.gov/timezone.cgi?UTC/s/0", False, False)
 		timeIndex = page.find(TIME_START)
 		time = page[(timeIndex+len(TIME_START)):]
